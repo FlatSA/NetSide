@@ -7,16 +7,22 @@ public class Route {
     private final Integer routeId;
     private final ArrayList<String> ipList;
     private final Integer length;
+    private final Rating rating;
 
-    public Route(User user, Integer routeId, Integer length, ArrayList<String> ipList) {
+    public Route(User user, Integer routeId, Integer length, Rating rating, ArrayList<String> ipList) {
         this.user = user;
         this.routeId = routeId;
         this.length = length;
+        this.rating  = rating;
         this.ipList = new ArrayList<>(ipList);
     }
 
     public User getUser() {
         return user;
+    }
+
+    public Rating getRating() {
+        return rating;
     }
 
     public Integer getRouteId() {
