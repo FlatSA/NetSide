@@ -1,4 +1,4 @@
-package by.fpmibsu.netside.entity;
+package src.by.fpmibsu.netside.entity;
 
 public class SpeedTest {
     private final User user;

@@ -1,4 +1,4 @@
-package by.fpmibsu.netside.entity;
+package src.by.fpmibsu.netside.entity;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package by.fpmibsu.netside.entity;
+package src.by.fpmibsu.netside.entity;
 
 public class Moderator extends User {
     public Moderator(Integer userId, String login, String password, String email) {

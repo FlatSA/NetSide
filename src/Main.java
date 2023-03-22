@@ -1,4 +1,6 @@
-import by.fpmibsu.netside.entity.*;
+package src;
+
+import src.by.fpmibsu.netside.entity.*;
 
 public class Main {
     public static void main(String[] args) {
