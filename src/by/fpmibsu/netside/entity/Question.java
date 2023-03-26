@@ -5,18 +5,20 @@ import java.util.ArrayList;
 public class Question {
     private final Integer id;
     private final User user;
+    private final Integer userID;
     private Integer votes;
     private String message;
     final private String title;
     private final ArrayList<Answer> answers;
 
-    public Question(Integer id, User user, String message, String title) {
+    public Question(Integer id, User user, Integer userID, String message, String title) {
         this.id = id;
         this.user = user;
+        this.userID = userID;
         this.votes = 0;
         this.message = message;
         this.title = title;
-        answers = new ArrayList<>();
+        this.answers = new ArrayList<>();
     }
 
     public Integer getId() {
