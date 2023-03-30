@@ -122,4 +122,16 @@ public class User extends Entity {
             }
         }
     }
+
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+        output.append(id)
+                .append(" ")
+                .append(login)
+                .append(" ")
+                .append(email)
+                .append(" ")
+                .append(password);
+        return output.toString();
+    }
 }
