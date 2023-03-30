@@ -11,6 +11,10 @@ public class Question extends Entity {
     private List<Answer> answers;
     static Integer defaultVotes = 0;
 
+    public Question() {
+        super();
+    }
+
     public Question(Integer id, User user, String message, String title) {
         super(id);
         this.user = user;

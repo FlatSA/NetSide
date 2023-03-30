@@ -9,16 +9,27 @@ public class Route extends Entity {
     private Integer length;
     private Rating rating;
 
+    private String time;
+
     public Route() {
         super();
     }
 
-    public Route(User user, Integer id, Integer length, Rating rating, List<InetAddress> ipList) {
+    public Route(User user, Integer id, Integer length, Rating rating, List<InetAddress> ipList, String time) {
         super(id);
         this.user = user;
         this.length = length;
         this.rating  = rating;
         this.ipList = ipList;
+        this.time = time;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public User getUser() {

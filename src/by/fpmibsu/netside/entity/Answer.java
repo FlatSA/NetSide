@@ -1,15 +1,30 @@
 package src.by.fpmibsu.netside.entity;
 
 public class Answer extends Entity {
+
+    private String message;
     private Integer votes;
     private User user;
     private Question question;
 
-    public Answer(Integer id, Integer votes, User user, Question question) {
+    public Answer() {
+        super();
+    }
+
+    public Answer(Integer id, String message, Integer votes, User user, Question question) {
         super(id);
+        this.message = message;
         this.votes = votes;
         this.user = user;
         this.question = question;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public Integer getVotes() {

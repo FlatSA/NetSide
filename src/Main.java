@@ -21,15 +21,14 @@ public class Main {
         String connectionUrl = props.getProperty("db.url");
 
         try(Connection connection = DriverManager.getConnection(connectionUrl)) {
-            UserDao userDao = new UserDao();
-            userDao.setConnection(connection);
-            User us = userDao.findEntityById(7);
-            us.setLogin("JARIK");
-            System.out.println(userDao.update(us));
-            List<User> list = userDao.findAll();
-            for(User user1 : list) {
-                System.out.println(user1.toString());
+            UserDao userDao = new UserDao(connection);
+            User user = userDao.findEntityById(1);
+            userDao.getQuestions(user);
+            List<User> users = userDao.findAll();
+            for(User u : users) {
+                System.out.println(u.toString());
             }
+
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
         }
