@@ -26,7 +26,7 @@ public class SpeedTest extends Entity {
         return uploadSpeed;
     }
 
-    public Double getDownlodSpeed() {
+    public Double getDownloadSpeed() {
         return downloadSpeed;
     }
 

@@ -1,13 +1,14 @@
 package src.by.fpmibsu.netside.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Question extends Entity {
     private User user;
     private Integer votes;
     private String message;
     private String title;
-    private ArrayList<Answer> answers;
+    private List<Answer> answers;
     static Integer defaultVotes = 0;
 
     public Question(Integer id, User user, String message, String title) {

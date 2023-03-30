@@ -1,10 +1,11 @@
 package src.by.fpmibsu.netside.entity;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.net.InetAddress;
 
 public class Route extends Entity {
     private User user;
-    private ArrayList<String> ipList;
+    private List<InetAddress> ipList;
     private Integer length;
     private Rating rating;
 
@@ -12,12 +13,12 @@ public class Route extends Entity {
         super();
     }
 
-    public Route(User user, Integer id, Integer length, Rating rating, ArrayList<String> ipList) {
+    public Route(User user, Integer id, Integer length, Rating rating, List<InetAddress> ipList) {
         super(id);
         this.user = user;
         this.length = length;
         this.rating  = rating;
-        this.ipList = new ArrayList<>(ipList);
+        this.ipList = ipList;
     }
 
     public User getUser() {
@@ -28,8 +29,8 @@ public class Route extends Entity {
         return rating;
     }
 
-    public ArrayList<String> getIpList() {
-        return new ArrayList<String>(ipList);
+    public List<InetAddress> getIpList() {
+        return ipList;
     }
 
     public Integer getLength() {
@@ -40,7 +41,7 @@ public class Route extends Entity {
         this.user = user;
     }
 
-    public void setIpList(ArrayList<String> ipList) {
+    public void setIpList(List<InetAddress> ipList) {
         this.ipList = ipList;
     }
 
