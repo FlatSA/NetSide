@@ -1,18 +1,21 @@
 package src.by.fpmibsu.netside.entity;
 
-public class SpeedTest {
-    private final User user;
-    private final Double uploadSpeed;
-    private final Double downloadSpeed;
-    private final Double ping;
-    private final Integer speedTestId;
+public class SpeedTest extends Entity {
+    private User user;
+    private Double uploadSpeed;
+    private Double downloadSpeed;
+    private Double ping;
 
-    public SpeedTest(User user, Double uploadSpeed, Double downloadSpeed, Double ping, Integer speedTestId) {
+    public SpeedTest() {
+        super();
+    }
+
+    public SpeedTest(User user, Double uploadSpeed, Double downloadSpeed, Double ping, Integer id) {
+        super(id);
         this.user = user;
         this.uploadSpeed = uploadSpeed;
         this.downloadSpeed = downloadSpeed;
         this.ping = ping;
-        this.speedTestId = speedTestId;
     }
 
     public User getUser() {
@@ -30,8 +33,19 @@ public class SpeedTest {
     public Double getPing() {
         return ping;
     }
-
-    public Integer getSpeedTestId() {
-        return speedTestId;
+    public void setUploadSpeed(Double uploadSpeed) {
+        this.uploadSpeed = uploadSpeed;
     }
+
+    public void setDownloadSpeed(Double downloadSpeed) {
+        this.downloadSpeed = downloadSpeed;
+    }
+
+    public void setPing(Double ping) {
+        this.ping = ping;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }

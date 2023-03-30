@@ -2,30 +2,25 @@ package src.by.fpmibsu.netside.entity;
 
 import java.util.ArrayList;
 
-public class Question {
-    private final Integer questionId;
-    private final User author;
+public class Question extends Entity {
+    private User user;
     private Integer votes;
     private String message;
-    final private String title;
-    private final ArrayList<Answer> answers;
-    static final Integer defaultVotes = 0;
+    private String title;
+    private ArrayList<Answer> answers;
+    static Integer defaultVotes = 0;
 
-    public Question(Integer questionId, User author, String message, String title) {
-        this.questionId = questionId;
-        this.author = author;
+    public Question(Integer id, User user, String message, String title) {
+        super(id);
+        this.user = user;
         this.votes = defaultVotes;
         this.message = message;
         this.title = title;
         answers = new ArrayList<>();
     }
 
-    public Integer getQuestionId() {
-        return questionId;
-    }
-
-    public User getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
     public Integer getVotes() {
@@ -54,6 +49,22 @@ public class Question {
 
     public void addAnswer(Answer answer) {
         answers.add(answer);
+    }
+
+    public void setVotes(Integer votes) {
+        this.votes = votes;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAnswers(ArrayList<Answer> answers) {
+        this.answers = answers;
     }
 
     public void removeAns(Answer answer) {

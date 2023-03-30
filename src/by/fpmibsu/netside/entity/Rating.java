@@ -1,14 +1,17 @@
 package src.by.fpmibsu.netside.entity;
 
-public class Rating {
-    private final Integer value;
-    private final Route route;
-    private final Integer ratingId;
+public class Rating extends Entity {
+    private Integer value;
+    private Route route;
 
-    public Rating(Integer value, Route route, Integer ratingId) {
+    public Rating() {
+        super();
+    }
+
+    public Rating(Integer value, Route route, Integer id) {
+        super(id);
         this.value = value;
         this.route = route;
-        this.ratingId = ratingId;
     }
 
     public Integer getValue() {
@@ -17,5 +20,13 @@ public class Rating {
 
     public Route getRoute() {
         return route;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
+    }
+
+    public void setRoute(Route route) {
+        this.route = route;
     }
 }

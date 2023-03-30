@@ -1,28 +1,23 @@
 package src.by.fpmibsu.netside.entity;
 
-public class Answer {
-    private final Integer answerId;
+public class Answer extends Entity {
     private Integer votes;
-    private final User author;
-    private final Question question;
+    private User user;
+    private Question question;
 
-    public Answer(Integer answerId, Integer votes, User author, Question question) {
-        this.answerId = answerId;
+    public Answer(Integer id, Integer votes, User user, Question question) {
+        super(id);
         this.votes = votes;
-        this.author = author;
+        this.user = user;
         this.question = question;
-    }
-
-    public Integer getAnswerId() {
-        return answerId;
     }
 
     public Integer getVotes() {
         return votes;
     }
 
-    public User getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
     public Question getQuestion() {
@@ -31,5 +26,17 @@ public class Answer {
 
     public void increaseVotes() {
         votes++;
+    }
+
+    public void setVotes(Integer votes) {
+        this.votes = votes;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
     }
 }

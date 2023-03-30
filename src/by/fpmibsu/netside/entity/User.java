@@ -2,19 +2,22 @@ package src.by.fpmibsu.netside.entity;
 
 import java.util.ArrayList;
 
-public class User {
-    private final Integer userId;
+public class User extends Entity {
     private String login;
     private String password;
     private String email;
 
-    private final ArrayList<Question> questions;
-    private final ArrayList<Answer> answers;
-    private final ArrayList<SpeedTest> speedTests;
-    private final ArrayList<Route> routes;
+    private ArrayList<Question> questions;
+    private ArrayList<Answer> answers;
+    private ArrayList<SpeedTest> speedTests;
+    private ArrayList<Route> routes;
 
-    public User(Integer userId, String login, String password, String email) {
-        this.userId = userId;
+    public User() {
+        super();
+    };
+
+    public User(Integer id, String login, String password, String email) {
+        super(id);
         this.login = login;
         this.password = password;
         this.email = email;
@@ -38,10 +41,6 @@ public class User {
 
     public ArrayList<Route> getRoutes() {
         return new ArrayList<Route>(routes);
-    }
-
-    public Integer getUserId() {
-        return userId;
     }
 
     public String getLogin() {
