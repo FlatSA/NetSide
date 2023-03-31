@@ -86,15 +86,13 @@ public class User extends Entity {
         this.email = email;
     }
 
+    @Override
     public String toString() {
-        StringBuilder output = new StringBuilder();
-        output.append(id)
-                .append(" ")
-                .append(login)
-                .append(" ")
-                .append(email)
-                .append(" ")
-                .append(password);
-        return output.toString();
+        return "User{" +
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

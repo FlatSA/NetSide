@@ -7,21 +7,23 @@ public class Question extends Entity {
     private User user;
     private Integer votes;
     private String message;
-    private String title;
-    private List<Answer> answers;
-    static Integer defaultVotes = 0;
+    private List<Answer> answers = new ArrayList<>();
 
     public Question() {
         super();
     }
 
-    public Question(Integer id, User user, String message, String title) {
+    public Question(User user, String message, Integer votes) {
+        this.user = user;
+        this.message = message;
+        this.votes = votes;
+    }
+
+    public Question(Integer id, User user, String message, Integer votes) {
         super(id);
         this.user = user;
-        this.votes = defaultVotes;
+        this.votes = votes;
         this.message = message;
-        this.title = title;
-        answers = new ArrayList<>();
     }
 
     public User getUser() {
@@ -44,16 +46,8 @@ public class Question extends Entity {
         this.message = message;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public ArrayList<Answer> getAnswers() {
-        return new ArrayList<Answer>(answers);
-    }
-
-    public void addAnswer(Answer answer) {
-        answers.add(answer);
+    public List<Answer> getAnswers() {
+        return answers;
     }
 
     public void setVotes(Integer votes) {
@@ -64,21 +58,17 @@ public class Question extends Entity {
         this.user = user;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setAnswers(ArrayList<Answer> answers) {
+    public void setAnswers(List<Answer> answers) {
         this.answers = answers;
     }
 
-    public void removeAns(Answer answer) {
-        int size = answers.size();
-        for(int i = 0; i < size; i++) {
-            if(answer == answers.get(i)) {
-                answers.remove(i);
-                break;
-            }
-        }
+    @Override
+    public String toString() {
+        return "Question{" +
+                "user_id=" + user.getId() +
+                ", votes=" + votes +
+                ", message='" + message + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

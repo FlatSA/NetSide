@@ -22,12 +22,12 @@ public class Main {
 
         try(Connection connection = DriverManager.getConnection(connectionUrl)) {
             UserDao userDao = new UserDao(connection);
+            QuestionDao questionDao = new QuestionDao(connection);
+
             User user = userDao.findEntityById(1);
             userDao.getQuestions(user);
-            List<User> users = userDao.findAll();
-            for(User u : users) {
-                System.out.println(u.toString());
-            }
+
+            System.out.println(user.getQuestions());
 
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
