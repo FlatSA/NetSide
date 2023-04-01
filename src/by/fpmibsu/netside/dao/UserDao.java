@@ -164,7 +164,8 @@ public class UserDao extends AbstractDao<User> {
                 test.setUser(entity);
                 test.setUploadSpeed(resultSet.getDouble(3));
                 test.setDownloadSpeed(resultSet.getDouble(4));
-                test.setPing(resultSet.getDouble(5));
+                test.setPing(resultSet.getInt(5));
+                test.setId(resultSet.getInt(1));
                 entity.getSpeedTests().add(test);
             }
         } catch(SQLException e) {

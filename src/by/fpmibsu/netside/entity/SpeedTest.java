@@ -4,13 +4,20 @@ public class SpeedTest extends Entity {
     private User user;
     private Double uploadSpeed;
     private Double downloadSpeed;
-    private Double ping;
+    private Integer ping;
 
     public SpeedTest() {
         super();
     }
 
-    public SpeedTest(User user, Double uploadSpeed, Double downloadSpeed, Double ping, Integer id) {
+    public SpeedTest(User user, Double uploadSpeed, Double downloadSpeed, Integer ping) {
+        this.user = user;
+        this.uploadSpeed = uploadSpeed;
+        this.downloadSpeed = downloadSpeed;
+        this.ping = ping;
+    }
+
+    public SpeedTest(Integer id, User user, Double uploadSpeed, Double downloadSpeed, Integer ping) {
         super(id);
         this.user = user;
         this.uploadSpeed = uploadSpeed;
@@ -30,7 +37,7 @@ public class SpeedTest extends Entity {
         return downloadSpeed;
     }
 
-    public Double getPing() {
+    public Integer getPing() {
         return ping;
     }
     public void setUploadSpeed(Double uploadSpeed) {
@@ -41,11 +48,21 @@ public class SpeedTest extends Entity {
         this.downloadSpeed = downloadSpeed;
     }
 
-    public void setPing(Double ping) {
+    public void setPing(Integer ping) {
         this.ping = ping;
     }
     public void setUser(User user) {
         this.user = user;
     }
 
+    @Override
+    public String toString() {
+        return "SpeedTest{" +
+                "user=" + user +
+                ", uploadSpeed=" + uploadSpeed +
+                ", downloadSpeed=" + downloadSpeed +
+                ", ping=" + ping +
+                ", id=" + id +
+                '}';
+    }
 }

@@ -24,15 +24,13 @@ public class Main {
             UserDao userDao = new UserDao(connection);
             QuestionDao questionDao = new QuestionDao(connection);
             AnswerDao answerDao = new AnswerDao(connection);
+            SpeedTestDao testDao = new SpeedTestDao(connection);
 
             List<User> users = userDao.findAll();
-            System.out.println(users);
+            User user = users.get(3);
 
-            Question question = questionDao.findEntityById(11);
-            Answer answer = answerDao.findEntityById(2);
-            answerDao.delete(answer);
-            questionDao.getAnswers(question);
-            System.out.println(question.getAnswers());
+            SpeedTest test = testDao.findEntityById(1);
+            System.out.println(test);
 
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
