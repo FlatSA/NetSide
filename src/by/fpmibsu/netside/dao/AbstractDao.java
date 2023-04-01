@@ -8,6 +8,13 @@ import java.util.List;
 
 public abstract class AbstractDao <T extends Entity> {
     protected Connection connection;
+
+    public AbstractDao() { };
+
+    public AbstractDao(Connection connection) {
+        setConnection(connection);
+    }
+
     public abstract T findEntityById(Integer id) throws DaoException;
     public abstract boolean delete(T entity) throws DaoException;
     public abstract boolean create(T entity) throws DaoException;

@@ -11,8 +11,12 @@ import java.util.List;
 
 public class QuestionDao extends AbstractDao<Question> {
 
+    public QuestionDao() {
+        super();
+    }
+
     public QuestionDao(Connection connection) {
-        setConnection(connection);
+        super(connection);
     }
 
     public List<Question> findAll() throws DaoException {
@@ -41,12 +45,12 @@ public class QuestionDao extends AbstractDao<Question> {
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
+            UserDao userDao = new UserDao(connection);
             if(resultSet.next()) {
                 Question question = new Question();
                 question.setId(id);
                 question.setMessage(resultSet.getString(3));
                 question.setVotes(resultSet.getInt(4));
-                UserDao userDao = new UserDao(connection);
                 question.setUser(userDao.findEntityById(resultSet.getInt(2)));
                 return question;
             }
@@ -106,6 +110,7 @@ public class QuestionDao extends AbstractDao<Question> {
            statement.setInt(1, entity.getId());
            ResultSet resultSet = statement.executeQuery();
            UserDao userDao = new UserDao(connection);
+           entity.getAnswers().clear();
            while(resultSet.next()) {
               Answer answer = new Answer();
               User user = userDao.findEntityById(resultSet.getInt(3));

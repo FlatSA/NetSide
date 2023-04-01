@@ -13,8 +13,7 @@ public class UserDao extends AbstractDao<User> {
     }
 
     public UserDao(Connection connection) throws DaoException {
-        super();
-        setConnection(connection);
+        super(connection);
     }
 
     public List<User> findAll() throws DaoException {
@@ -47,10 +46,10 @@ public class UserDao extends AbstractDao<User> {
                 String password = resultSet.getString("password");
                 return new User(id, login, password, email);
             }
+            return null;
         } catch (SQLException e) {
             throw new DaoException(e.getMessage(), e.getCause());
         }
-        return null;
     }
 
     @Override
@@ -103,6 +102,7 @@ public class UserDao extends AbstractDao<User> {
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
+            entity.getQuestions().clear();
             while(resultSet.next()) {
                 Question question = new Question();
                 question.setUser(entity);
@@ -121,6 +121,7 @@ public class UserDao extends AbstractDao<User> {
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
+            entity.getAnswers().clear();
             while(resultSet.next()) {
                 Answer answer = new Answer();
                 answer.setUser(entity);
@@ -138,6 +139,7 @@ public class UserDao extends AbstractDao<User> {
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
+            entity.getRoutes().clear();
             while(resultSet.next()) {
                 Route route = new Route();
                 route.setUser(entity);
@@ -156,6 +158,7 @@ public class UserDao extends AbstractDao<User> {
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
+            entity.getSpeedTests().clear();
             while(resultSet.next()) {
                 SpeedTest test = new SpeedTest();
                 test.setUser(entity);

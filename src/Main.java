@@ -23,11 +23,16 @@ public class Main {
         try(Connection connection = DriverManager.getConnection(connectionUrl)) {
             UserDao userDao = new UserDao(connection);
             QuestionDao questionDao = new QuestionDao(connection);
+            AnswerDao answerDao = new AnswerDao(connection);
 
-            User user = userDao.findEntityById(1);
-            userDao.getQuestions(user);
+            List<User> users = userDao.findAll();
+            System.out.println(users);
 
-            System.out.println(user.getQuestions());
+            Question question = questionDao.findEntityById(11);
+            Answer answer = answerDao.findEntityById(2);
+            answerDao.delete(answer);
+            questionDao.getAnswers(question);
+            System.out.println(question.getAnswers());
 
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
