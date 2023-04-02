@@ -3,9 +3,7 @@ package src;
 import src.by.fpmibsu.netside.entity.*;
 import src.by.fpmibsu.netside.dao.*;
 import java.sql.*;
-import java.util.List;
 import java.util.Properties;
-import java.util.SortedMap;
 import java.io.*;
 
 public class Main {
@@ -25,12 +23,13 @@ public class Main {
             QuestionDao questionDao = new QuestionDao(connection);
             AnswerDao answerDao = new AnswerDao(connection);
             SpeedTestDao testDao = new SpeedTestDao(connection);
+            ModeratorDao moderatorDao = new ModeratorDao(connection);
 
-            List<User> users = userDao.findAll();
-            User user = users.get(3);
+            User user = userDao.findEntityById(4);
 
-            SpeedTest test = testDao.findEntityById(1);
-            System.out.println(test);
+            Moderator moderator = moderatorDao.findEntityById(4);
+
+            System.out.println(moderator);
 
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
