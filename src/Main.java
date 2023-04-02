@@ -15,7 +15,6 @@ public class Main {
             System.out.println("Failed to load configuration: " + e.getMessage());
             return;
         }
-
         String connectionUrl = props.getProperty("db.url");
 
         try(Connection connection = DriverManager.getConnection(connectionUrl)) {

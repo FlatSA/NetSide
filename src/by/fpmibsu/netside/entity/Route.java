@@ -1,34 +1,32 @@
 package src.by.fpmibsu.netside.entity;
 
+import java.sql.Time;
 import java.util.List;
 import java.net.InetAddress;
 
 public class Route extends Entity {
     private User user;
-    private List<InetAddress> ipList;
+    private List<String> ipList;
     private Integer length;
-    private Rating rating;
-
-    private String time;
+    private Time time;
 
     public Route() {
         super();
     }
 
-    public Route(User user, Integer id, Integer length, Rating rating, List<InetAddress> ipList, String time) {
+    public Route(User user, Integer id, Integer length, List<String> ipList, Time time) {
         super(id);
         this.user = user;
         this.length = length;
-        this.rating  = rating;
         this.ipList = ipList;
         this.time = time;
     }
 
-    public String getTime() {
+    public Time getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Time time) {
         this.time = time;
     }
 
@@ -36,11 +34,7 @@ public class Route extends Entity {
         return user;
     }
 
-    public Rating getRating() {
-        return rating;
-    }
-
-    public List<InetAddress> getIpList() {
+    public List<String> getIpList() {
         return ipList;
     }
 
@@ -52,15 +46,11 @@ public class Route extends Entity {
         this.user = user;
     }
 
-    public void setIpList(List<InetAddress> ipList) {
+    public void setIpList(List<String> ipList) {
         this.ipList = ipList;
     }
 
     public void setLength(Integer length) {
         this.length = length;
-    }
-
-    public void setRating(Rating rating) {
-        this.rating = rating;
     }
 }
