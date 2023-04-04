@@ -145,7 +145,7 @@ public class UserDao extends AbstractDao<User> {
                 route.setUser(entity);
                 route.setId(resultSet.getInt(1));
                 route.setLength(resultSet.getInt(3));
-                route.setTime(resultSet.getTime(4));
+                route.setTime(resultSet.getString(4));
                 entity.getRoutes().add(route);
             }
         } catch(SQLException e) {

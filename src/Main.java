@@ -3,7 +3,7 @@ package src;
 import src.by.fpmibsu.netside.entity.*;
 import src.by.fpmibsu.netside.dao.*;
 import java.sql.*;
-import java.util.Properties;
+import java.util.*;
 import java.io.*;
 
 public class Main {
@@ -18,18 +18,10 @@ public class Main {
         String connectionUrl = props.getProperty("db.url");
 
         try(Connection connection = DriverManager.getConnection(connectionUrl)) {
+            IpDao ipDao = new IpDao(connection);
+            RouteDao routeDao = new RouteDao(connection);
+            RatingDao ratingDao = new RatingDao(connection);
             UserDao userDao = new UserDao(connection);
-            QuestionDao questionDao = new QuestionDao(connection);
-            AnswerDao answerDao = new AnswerDao(connection);
-            SpeedTestDao testDao = new SpeedTestDao(connection);
-            ModeratorDao moderatorDao = new ModeratorDao(connection);
-
-            User user = userDao.findEntityById(4);
-
-            Moderator moderator = moderatorDao.findEntityById(4);
-
-            System.out.println(moderator);
-
         } catch (SQLException | DaoException e) {
             System.out.println(e.getMessage());
         }

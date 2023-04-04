@@ -6,15 +6,15 @@ import java.net.InetAddress;
 
 public class Route extends Entity {
     private User user;
-    private List<String> ipList;
+    private List<Ip> ipList;
     private Integer length;
-    private Time time;
+    private String time;
 
     public Route() {
         super();
     }
 
-    public Route(User user, Integer id, Integer length, List<String> ipList, Time time) {
+    public Route(User user, Integer id, Integer length, List<Ip> ipList, String time) {
         super(id);
         this.user = user;
         this.length = length;
@@ -22,11 +22,18 @@ public class Route extends Entity {
         this.time = time;
     }
 
-    public Time getTime() {
+    public Route(User user, Integer length, List<Ip> ipList, String time) {
+        this.user = user;
+        this.length = length;
+        this.ipList = ipList;
+        this.time = time;
+    }
+
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -34,7 +41,7 @@ public class Route extends Entity {
         return user;
     }
 
-    public List<String> getIpList() {
+    public List<Ip> getIpList() {
         return ipList;
     }
 
@@ -46,7 +53,7 @@ public class Route extends Entity {
         this.user = user;
     }
 
-    public void setIpList(List<String> ipList) {
+    public void setIpList(List<Ip> ipList) {
         this.ipList = ipList;
     }
 

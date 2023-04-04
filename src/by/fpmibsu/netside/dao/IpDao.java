@@ -2,11 +2,20 @@ package src.by.fpmibsu.netside.dao;
 
 import src.by.fpmibsu.netside.entity.*;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class IpDao extends AbstractDao<Ip> {
+
+    public IpDao() {
+        super();
+    }
+
+    public IpDao(Connection connection) {
+        super(connection);
+    }
 
     @Override
     public Ip findEntityById(Integer id) throws DaoException {

@@ -4,11 +4,20 @@ import src.by.fpmibsu.netside.entity.Rating;
 import src.by.fpmibsu.netside.entity.Route;
 import src.by.fpmibsu.netside.entity.User;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class RatingDao extends AbstractDao<Rating> {
+
+    public RatingDao() {
+        super();
+    }
+
+    public RatingDao(Connection connection) {
+        super(connection);
+    }
 
     @Override
     public Rating findEntityById(Integer id) throws DaoException {

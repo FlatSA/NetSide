@@ -14,6 +14,11 @@ public class Rating extends Entity {
         this.route = route;
     }
 
+    public Rating(Integer value, Route route) {
+        this.value = value;
+        this.route = route;
+    }
+
     public Integer getValue() {
         return value;
     }
