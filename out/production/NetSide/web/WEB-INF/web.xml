@@ -5,13 +5,12 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>LifeCycleServlet</servlet-class>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>src.web.HelloWorldServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>/aba</url-pattern>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
     </servlet-mapping>
-
-        </web-app>
+</web-app>
