@@ -11,9 +11,50 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LifeCycleServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/NetSide.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/lib/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/AbstractDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/AnswerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/BaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/DaoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/IpDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/ModeratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/RatingDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/SpeedTestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Answer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Ip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Moderator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Question.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/SpeedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/web/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/hey.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/lib/postgresql-42.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/hey.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/web/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/hey.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/HelloWorldServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hey.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +95,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -66,18 +108,23 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunDashboard">
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
   <component name="RunManager">
-    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="Tomcat 10.1.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="NetSide:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/NetSide_war_exploded" />
+            <option name="CONTEXT_PATH" value="/NetSide" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="2ae65475-3105-4df7-8797-36e147f88649" />
+        <option name="BASE_DIRECTORY_NAME" value="29eccc08-bd70-47b0-b838-f0fda740d3f1" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -85,7 +132,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53792" />
+        <option name="DEBUG_PORT" value="62953" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -149,6 +196,21 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="NetSide:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -173,6 +235,9 @@
       <workItem from="1683712027878" duration="3314000" />
       <workItem from="1684139324334" duration="1045000" />
       <workItem from="1684140381103" duration="1929000" />
+      <workItem from="1684820426281" duration="424000" />
+      <workItem from="1684839065262" duration="6070000" />
+      <workItem from="1684846618619" duration="6010000" />
     </task>
     <servers />
   </component>
