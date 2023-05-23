@@ -1,6 +1,7 @@
-package src.main.Java;
+package src.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +15,7 @@ public class LoginController extends HttpServlet {
         // Код инициализации
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String un = request.getParameter("username");
         String pw = request.getParameter("password");
@@ -27,9 +29,13 @@ public class LoginController extends HttpServlet {
         }
     }
 
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+    }
+
     public void destroy() {
         // Код очистки или закрытия ресурсов
     }
-
-
 }
