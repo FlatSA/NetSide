@@ -172,4 +172,21 @@ public class UserDao extends AbstractDao<User> {
             throw new DaoException(e.getMessage(), e.getCause());
         }
     }
+
+    public User getUserByName(String username) throws DaoException {
+        String sql = "SELECT * FROM \"user\" WHERE login = ?;";
+        try(PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()) {
+                String login = resultSet.getString("login");
+                String email = resultSet.getString("email");
+                String password = resultSet.getString("password");
+                return new User(login, password, email);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e.getCause());
+        }
+    }
 }
