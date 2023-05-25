@@ -10,19 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +84,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/login" />
+      <recent name="$PROJECT_DIR$/web/home" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/by/fpmibsu/netside/connection" />
-      <recent name="$PROJECT_DIR$/web/login/assets" />
-      <recent name="$PROJECT_DIR$/web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -215,6 +222,7 @@
       <workItem from="1684860194077" duration="7919000" />
       <workItem from="1684944152855" duration="1825000" />
       <workItem from="1684947601068" duration="3781000" />
+      <workItem from="1684952305235" duration="2749000" />
     </task>
     <servers />
   </component>

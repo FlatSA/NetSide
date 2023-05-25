@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>NetSide</title>
 </head>
 <body>
-<h1> You are in index.jsp </h1>
+<form method="post" action="login.jsp">
+    <button type="submit">Log In</button>
+</form>
+
+<form method="post" action="signup.jsp">
+    <button type="submit">Sign Up</button>
+</form>
 </body>
 </html>

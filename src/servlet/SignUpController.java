@@ -4,19 +4,17 @@ import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.UserDao;
 import src.by.fpmibsu.netside.entity.User;
 
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
+@WebServlet(name = "SignUpController", value = "/SignUpController")
+public class SignUpController extends HttpServlet {
 
-public class LoginController extends HttpServlet {
     private UserDao userDao = null;
     private Connection connection = null;
 
@@ -38,34 +36,27 @@ public class LoginController extends HttpServlet {
         }
 
     }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String email = request.getParameter("email");
 
         try {
-            User user = userDao.getUserByName(username);
-
-            if(user == null) {
-                response.sendRedirect("error.html");
-                return;
-            } else if(password.equals(user.getPassword())) {
+            if(userDao.create(new User(username, password, email))) {
                 response.sendRedirect("success.html");
                 return;
             } else {
                 response.sendRedirect("error.html");
                 return;
             }
-
         } catch (DaoException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // request.getRequestDispatcher("index.jsp").forward(request, response);
-        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 }
