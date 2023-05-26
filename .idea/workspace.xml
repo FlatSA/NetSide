@@ -10,17 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -56,31 +60,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/login" />
-      <recent name="$PROJECT_DIR$/web/home" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/by/fpmibsu/netside/connection" />
+      <recent name="$PROJECT_DIR$/web/" />
+      <recent name="$PROJECT_DIR$/web/login/" />
+      <recent name="$PROJECT_DIR$/web/login/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,6 +99,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="NetSide:war exploded">
@@ -216,6 +221,7 @@
       <workItem from="1684952305235" duration="2749000" />
       <workItem from="1684993892690" duration="144000" />
       <workItem from="1685005115270" duration="1807000" />
+      <workItem from="1685109380866" duration="11740000" />
     </task>
     <servers />
   </component>
