@@ -11,7 +11,12 @@
 
 <body>
 <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
-  <div class="container"><a class="navbar-brand d-flex align-items-center" href="logged-user.jsp"><span>NetSide</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="logged-user.jsp"><span>NetSide</span></a>
+    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"></li>
@@ -20,7 +25,7 @@
         <li class="nav-item"><a class="nav-link" href="pricing.html">Top Questions</a></li>
         <li class="nav-item">
           <form method="post" action="route">
-            <button type="submit" class="nav-link" style="background: none; border: none; cursor: pointer;">Routes</button>
+            <button type="submit" class="nav-link" name="button" value="routeButton" style="background: none; border: none; cursor: pointer;">Routes</button>
           </form>
         </li>
       </ul>
@@ -33,9 +38,11 @@
       <div class="col-md-8 text-center text-md-start mx-auto">
         <div class="text-center">
           <h1 class="display-4 fw-bold mb-5"><br><br></h1>
-          <form class="d-flex justify-content-center flex-wrap" method="post">
+          <form class="d-flex justify-content-center flex-wrap" method="post" action="route">
             <div class="shadow-lg mb-3"></div>
-            <div class="shadow-lg mb-3"><button class="btn btn-primary" type="submit">Get Route</button></div>
+            <div class="shadow-lg mb-3">
+              <button class="btn btn-primary" name="button" value="getRouteButton" type="submit">Get Route</button>
+            </div>
           </form>
         </div>
       </div>
@@ -50,4 +57,5 @@
 <script src="style/assetsLoggedUser/bootstrap/js/bootstrap.min.js"></script>
 <script src="style/assetsLoggedUser/js/script.min.js"></script>
 </body>
+
 </html>

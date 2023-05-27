@@ -35,7 +35,7 @@
 <table>
     <thead>
     <tr>
-        <th>Login</th>
+        <th>Username</th>
         <th>Length</th>
         <th>Email</th>
     </tr>

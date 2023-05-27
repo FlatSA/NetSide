@@ -5,6 +5,7 @@ import src.by.fpmibsu.netside.dao.RouteDao;
 import src.by.fpmibsu.netside.dao.UserDao;
 import src.by.fpmibsu.netside.entity.Route;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,5 +34,10 @@ public class RouteService {
 
     public List<Route> getFirstFiveRoutes() throws DaoException {
         return routeDao.getTopFiveRoutes();
+    }
+
+    public Route findRouteByUserId(Integer id) throws DaoException {
+        Integer route_id = routeDao.findRouteIdByUserId(id);
+        return routeDao.findEntityById(route_id);
     }
 }

@@ -1,6 +1,7 @@
 package src.servlet;
 
 import src.by.fpmibsu.netside.dao.DaoException;
+import src.by.fpmibsu.netside.entity.Ip;
 import src.by.fpmibsu.netside.entity.Route;
 import src.service.RouteService;
 import src.service.UserService;
@@ -24,12 +25,21 @@ public class RouteController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String button = request.getParameter("button");
+
         try {
-            List<Route> routes = routeService.getFirstFiveRoutes();
-            request.setAttribute("routes", routes);
-            request.getRequestDispatcher("routes-list-styled.jsp").forward(request, response);
+            if("routeButton".equals(button)) {
+                List<Route> routes = routeService.getFirstFiveRoutes();
+                request.setAttribute("routes", routes);
+                request.getRequestDispatcher("routes-list-styled.jsp").forward(request, response);
+            } else if("getRouteButton".equals(button)) {
+                List<Ip> ipList = routeService.findRouteByUserId(17).getIpList();
+                request.setAttribute("ipList", ipList);
+                request.getRequestDispatcher("route-map.jsp").forward(request, response);
+            }
         } catch (DaoException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

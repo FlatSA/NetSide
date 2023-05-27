@@ -53,6 +53,25 @@ public class RouteDao extends AbstractDao<Route> {
         }
     }
 
+    public Integer findRouteIdByUserId(Integer id) throws DaoException {
+        String sql = "SELECT id \n" +
+                    "FROM route \n" +
+                    "WHERE user_id = ? \n" +
+                    "ORDER BY id DESC \n" +
+                    "LIMIT 1;\n";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                Integer route_id = resultSet.getInt("id");
+                return route_id;
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e.getCause());
+        }
+    }
+
     @Override
     public boolean delete(Route entity) throws DaoException {
         String sql = "DELETE FROM route WHERE id = ?;";
