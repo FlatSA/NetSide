@@ -1,5 +1,6 @@
 package src.by.fpmibsu.netside.entity;
 
+import java.net.NoRouteToHostException;
 import java.sql.Time;
 import java.util.List;
 import java.net.InetAddress;

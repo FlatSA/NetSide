@@ -5,6 +5,7 @@ import src.by.fpmibsu.netside.entity.Route;
 import src.by.fpmibsu.netside.entity.User;
 
 import java.net.InetAddress;
+import java.net.NoRouteToHostException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -109,5 +110,23 @@ public class RouteDao extends AbstractDao<Route> {
         } catch (SQLException e) {
             throw new DaoException(e.getMessage(), e.getCause());
         }
+    }
+
+    public List<Route> getTopFiveRoutes() throws DaoException {
+        List<Route> topRoutes = new ArrayList<>();
+        String sql = "SELECT id FROM route ORDER BY length DESC LIMIT 5";
+
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Integer id = resultSet.getInt("id");
+                Route route = findEntityById(id);
+                topRoutes.add(route);
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e.getCause());
+        }
+
+        return topRoutes;
     }
 }

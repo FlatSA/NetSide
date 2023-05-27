@@ -1,0 +1,37 @@
+package src.service;
+
+import src.by.fpmibsu.netside.dao.DaoException;
+import src.by.fpmibsu.netside.dao.RouteDao;
+import src.by.fpmibsu.netside.dao.UserDao;
+import src.by.fpmibsu.netside.entity.Route;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
+
+public class RouteService {
+    private RouteDao routeDao = null;
+    private Connection connection = null;
+
+    public RouteService() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection("jdbc:postgresql://dpg-cgdgd102qv2aq5lnnegg-a.frankfurt-postgres.render.com:5432/net_side?user=user&password=DtBAsqFIMyWL6HCHs7PBreMF9SguZuJi");
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("Connection failed from RouteService");
+            throw new RuntimeException(e);
+        }
+
+        try {
+            routeDao = new RouteDao(connection);
+        } catch (DaoException e) {
+            System.out.println("Dao creation failed from RouteService");
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Route> getFirstFiveRoutes() throws DaoException {
+        return routeDao.getTopFiveRoutes();
+    }
+}

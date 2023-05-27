@@ -32,10 +32,10 @@ public class SignUpController extends HttpServlet {
 
         try {
             if(userService.createUser(username, password, email)) {
-                response.sendRedirect("success.html");
+                response.sendRedirect("login.jsp");
                 return;
             } else {
-                response.sendRedirect("error.html");
+                response.sendRedirect("login-fail.jsp");
                 return;
             }
         } catch (DaoException e) {

@@ -25,13 +25,13 @@ public class LogInController extends HttpServlet {
             User user = userService.getUserByName(username);
 
             if(user == null) {
-                response.sendRedirect("error.html");
+                response.sendRedirect("login-fail.jsp");
                 return;
             } else if(password.equals(user.getPassword())) {
-                response.sendRedirect("success.html");
+                response.sendRedirect("logged-user.jsp");
                 return;
             } else {
-                response.sendRedirect("error.html");
+                response.sendRedirect("login-fail.jsp");
                 return;
             }
 

@@ -17,14 +17,14 @@ public class UserService {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection("jdbc:postgresql://dpg-cgdgd102qv2aq5lnnegg-a.frankfurt-postgres.render.com:5432/net_side?user=user&password=DtBAsqFIMyWL6HCHs7PBreMF9SguZuJi");
         } catch (SQLException | ClassNotFoundException e) {
-            System.out.println("Connection failed from LoginController");
+            System.out.println("Connection failed from LoginService");
             throw new RuntimeException(e);
         }
 
         try {
             userDao = new UserDao(connection);
         } catch (DaoException e) {
-            System.out.println("Dao creation failed from LoginController");
+            System.out.println("Dao creation failed from LoginService");
             throw new RuntimeException(e);
         }
     }

@@ -27,4 +27,14 @@
         <servlet-name>SignUpController</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RouteController</servlet-name>
+        <servlet-class>src.servlet.RouteController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RouteController</servlet-name>
+        <url-pattern>/route</url-pattern>
+    </servlet-mapping>
 </web-app>
