@@ -179,10 +179,11 @@ public class UserDao extends AbstractDao<User> {
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();
             if(resultSet.next()) {
+                Integer userId = resultSet.getInt("id");
                 String login = resultSet.getString("login");
                 String email = resultSet.getString("email");
                 String password = resultSet.getString("password");
-                return new User(login, password, email);
+                return new User(userId, login, password, email);
             }
             return null;
         } catch (SQLException e) {

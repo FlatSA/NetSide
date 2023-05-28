@@ -28,7 +28,7 @@ public class LogInController extends HttpServlet {
                 response.sendRedirect("login-fail.jsp");
                 return;
             } else if(password.equals(user.getPassword())) {
-                response.sendRedirect("logged-user.jsp");
+                response.sendRedirect("logged-user.jsp?userId=" + user.getId());
                 return;
             } else {
                 response.sendRedirect("login-fail.jsp");

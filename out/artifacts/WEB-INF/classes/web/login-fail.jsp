@@ -33,7 +33,7 @@
                         <input class="shadow form-control" type="text" name="username" placeholder="Username">
                     </div>
                     <div class="mb-3">
-                        <input class="shadow form-control" type="password" name="password" placeholder="Password incorrect">
+                        <input class="shadow form-control" type="password" name="password" placeholder="Incorrect Data">
                     </div>
                     <div class="mb-5">
                         <input class="btn btn-primary shadow" type="submit" value="Log in">

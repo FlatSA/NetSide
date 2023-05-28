@@ -31,9 +31,15 @@ public class SignUpController extends HttpServlet {
         String email = request.getParameter("email");
 
         try {
-            if(userService.createUser(username, password, email)) {
-                response.sendRedirect("login.jsp");
-                return;
+            User user = userService.getUserByName(username);
+            if (user == null) {
+                if (userService.createUser(username, password, email)) {
+                    response.sendRedirect("login.jsp");
+                    return;
+                } else {
+                    response.sendRedirect("login-fail.jsp");
+                    return;
+                }
             } else {
                 response.sendRedirect("login-fail.jsp");
                 return;

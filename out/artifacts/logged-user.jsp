@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -41,7 +40,8 @@
           <form class="d-flex justify-content-center flex-wrap" method="post" action="route">
             <div class="shadow-lg mb-3"></div>
             <div class="shadow-lg mb-3">
-              <button class="btn btn-primary" name="button" value="getRouteButton" type="submit">Get Route</button>
+              <input type="hidden" name="userId" value="<%= request.getParameter("userId") %>">
+              <button class="btn btn-primary" name="Button" value="getRouteButton" type="submit"> <%= request.getParameter("userId") %></button>
             </div>
           </form>
         </div>

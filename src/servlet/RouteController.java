@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
 
 public class RouteController extends HttpServlet {
     RouteService routeService;
+    UserService userService;
 
     public void init() throws ServletException {
         routeService = new RouteService();
@@ -39,15 +40,16 @@ public class RouteController extends HttpServlet {
         String button = request.getParameter("button");
 
         try {
-            if ("getRouteButton".equals(button)) {
-                List<Ip> ipList = routeService.findRouteByUserId(17).getIpList();
-                List<double[]> dotList = getListOfDots(ipList);
-                request.setAttribute("dotList", dotList);
-                request.getRequestDispatcher("route-map.jsp").forward(request, response);
-            } else {
+            if("routeButton".equals(button)) {
                 List<Route> routes = routeService.getFirstFiveRoutes();
                 request.setAttribute("routes", routes);
                 request.getRequestDispatcher("routes-list-styled.jsp").forward(request, response);
+            } else {
+                Integer userId = userService.getUserByName(request.getParameter("userId")).getId();
+                List<Ip> ipList = routeService.findRouteByUserId(userId).getIpList();
+                List<double[]> dotList = getListOfDots(ipList);
+                request.setAttribute("dotList", dotList);
+                request.getRequestDispatcher("route-map.jsp").forward(request, response);
             }
         } catch (DaoException e) {
             System.err.println("doPost RouteController failed");

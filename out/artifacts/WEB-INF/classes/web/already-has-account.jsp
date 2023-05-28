@@ -30,10 +30,10 @@
                 </h2>
                 <form action="login" method="post">
                     <div class="mb-3">
-                        <input class="shadow form-control" type="text" name="username" placeholder="Username">
+                        <input class="shadow form-control" type="text" name="username" placeholder="Your username exists">
                     </div>
                     <div class="mb-3">
-                        <input class="shadow form-control" type="password" name="password" placeholder="Incorrect Data">
+                        <input class="shadow form-control" type="password" name="password" placeholder="Password">
                     </div>
                     <div class="mb-5">
                         <input class="btn btn-primary shadow" type="submit" value="Log in">
