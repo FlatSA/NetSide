@@ -41,7 +41,7 @@
             <div class="shadow-lg mb-3"></div>
             <div class="shadow-lg mb-3">
               <input type="hidden" name="userId" value="<%= request.getParameter("userId") %>">
-              <button class="btn btn-primary" name="Button" value="getRouteButton" type="submit"> <%= request.getParameter("userId") %></button>
+              <button class="btn btn-primary" name="button" value="getRouteButton" type="submit"> Go </button>
             </div>
           </form>
         </div>

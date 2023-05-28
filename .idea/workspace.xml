@@ -12,16 +12,9 @@
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/RouteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/map.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/map.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/map.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LogInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/RouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/RouteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logged-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login-fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-fail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +217,7 @@
       <workItem from="1685180360665" duration="27000" />
       <workItem from="1685181693637" duration="192000" />
       <workItem from="1685192740486" duration="3610000" />
-      <workItem from="1685267293227" duration="14843000" />
+      <workItem from="1685267293227" duration="16042000" />
     </task>
     <servers />
   </component>

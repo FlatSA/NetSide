@@ -38,14 +38,14 @@ public class RouteController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String button = request.getParameter("button");
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
 
         try {
             if("routeButton".equals(button)) {
                 List<Route> routes = routeService.getFirstFiveRoutes();
                 request.setAttribute("routes", routes);
                 request.getRequestDispatcher("routes-list-styled.jsp").forward(request, response);
-            } else {
-                Integer userId = userService.getUserByName(request.getParameter("userId")).getId();
+            } else if("getRouteButton".equals(button)){
                 List<Ip> ipList = routeService.findRouteByUserId(userId).getIpList();
                 List<double[]> dotList = getListOfDots(ipList);
                 request.setAttribute("dotList", dotList);
