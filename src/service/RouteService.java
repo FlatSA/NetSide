@@ -20,14 +20,14 @@ public class RouteService {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection("jdbc:postgresql://dpg-cgdgd102qv2aq5lnnegg-a.frankfurt-postgres.render.com:5432/net_side?user=user&password=DtBAsqFIMyWL6HCHs7PBreMF9SguZuJi");
         } catch (SQLException | ClassNotFoundException e) {
-            System.out.println("Connection failed from RouteService");
+            System.err.println("Connection failed from RouteService");
             throw new RuntimeException(e);
         }
 
         try {
             routeDao = new RouteDao(connection);
         } catch (DaoException e) {
-            System.out.println("Dao creation failed from RouteService");
+            System.err.println("Dao creation failed from RouteService");
             throw new RuntimeException(e);
         }
     }

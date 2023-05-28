@@ -11,12 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/servlet/RouteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/route-map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/web/route-map.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/route-map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/route-map.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/route-map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/route-map.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/RouteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/RouteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/RouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/RouteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/RouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/RouteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logged-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/route-map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/route-map.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -91,7 +95,6 @@
       </method>
     </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="NetSide:war exploded">
@@ -217,6 +220,10 @@
       <workItem from="1685127654129" duration="4739000" />
       <workItem from="1685164624294" duration="4521000" />
       <workItem from="1685173892695" duration="5185000" />
+      <workItem from="1685180360665" duration="27000" />
+      <workItem from="1685181693637" duration="192000" />
+      <workItem from="1685192740486" duration="3610000" />
+      <workItem from="1685267293227" duration="10178000" />
     </task>
     <servers />
   </component>
