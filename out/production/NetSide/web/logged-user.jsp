@@ -3,9 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Home - Brand</title>
+  <title>Home</title>
   <link rel="stylesheet" href="style/assetsLoggedUser/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+  <style>
+    .btn-primary:focus,
+    .btn-primary:active,
+    .form-control:focus {
+      box-shadow: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,6 +38,24 @@
     </div>
   </div>
 </nav>
+<%
+  String ip = request.getHeader("X-Forwarded-For");
+  if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+    ip = request.getHeader("Proxy-Client-IP");
+  }
+  if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+    ip = request.getHeader("WL-Proxy-Client-IP");
+  }
+  if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+    ip = request.getHeader("HTTP_CLIENT_IP");
+  }
+  if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+    ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+  }
+  if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+    ip = request.getRemoteAddr();
+  }
+%>
 <header class="pt-5">
   <div class="container pt-4 pt-xl-5">
     <div class="row pt-5">
@@ -41,9 +66,14 @@
             <div class="shadow-lg mb-3"></div>
             <div class="shadow-lg mb-3">
               <input type="hidden" name="userId" value="<%= request.getParameter("userId") %>">
-              <button class="btn btn-primary" name="button" value="getRouteButton" type="submit"> Go </button>
+              <input type="hidden" name="userIp" value="<%= ip %>">
+              <div class="input-group">
+                <input type="text" class="form-control" name="destinationIp" placeholder="Enter destination ip">
+                <button class="btn btn-primary" name="button" value="getRouteButton" type="submit" style="padding: 15px 40px; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="centre" title="Click to display the route between the server and input ip">Go</button>
+              </div>
             </div>
           </form>
+          <button class="btn btn-primary" name="button" value="getRouteButtonUserServer" type="submit" style="padding: 15px 40px; font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="centre" title="Click to display the route between the user and the server"> Show Route </button>
         </div>
       </div>
       <div class="col-12 col-lg-10 mx-auto">
@@ -57,5 +87,4 @@
 <script src="style/assetsLoggedUser/bootstrap/js/bootstrap.min.js"></script>
 <script src="style/assetsLoggedUser/js/script.min.js"></script>
 </body>
-
 </html>

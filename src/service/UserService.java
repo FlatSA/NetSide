@@ -36,4 +36,8 @@ public class UserService {
     public boolean createUser(String username, String password, String email) throws DaoException {
         return userDao.create(new User(username, password, email));
     }
+
+    public User findUserById(Integer id) throws DaoException {
+        return userDao.findEntityById(id);
+    }
 }

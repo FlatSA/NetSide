@@ -89,6 +89,7 @@ public class RouteDao extends AbstractDao<Route> {
     public boolean create(Route entity) throws DaoException {
         String sql = "INSERT INTO route (user_id, length, created_at) VALUES (?, ?, ?) RETURNING id;";
         String sqlRouteIp = "INSERT INTO route_ip (route_id, ip_id) VALUES (?, ?);";
+        String sqlExistRouteIp = "SELECT * FROM route_ip WHERE route_id = ? AND ip_id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getUser().getId());
@@ -100,14 +101,30 @@ public class RouteDao extends AbstractDao<Route> {
             }
 
             PreparedStatement statRouteIp = connection.prepareStatement(sqlRouteIp);
+            PreparedStatement existRouteIp = connection.prepareStatement(sqlExistRouteIp);
             statRouteIp.setInt(1, entity.getId());
             List<Ip> ipList = entity.getIpList();
-            Iterator<Ip> it = ipList.iterator();
-            System.out.println(ipList.toString());
+            Iterator<Ip> it = entity.getIpList().iterator();
+            IpDao ipDao = new IpDao(connection);
             while (it.hasNext()){
-                statRouteIp.setInt(1, entity.getId());
-                statRouteIp.setInt(2, it.next().getId());
-                statRouteIp.executeUpdate();
+                Ip currIp = it.next();
+
+                existRouteIp.setInt(1, entity.getId());
+                Ip ip = ipDao.findIp(currIp);
+
+                if(ip == null) {
+                    ipDao.create(currIp);
+                    ip = ipDao.findIp(currIp);
+                }
+
+                existRouteIp.setInt(2, ip.getId());
+                ResultSet resultSetIp = existRouteIp.executeQuery();
+
+                if(!resultSetIp.next()) {
+                    statRouteIp.setInt(1, entity.getId());
+                    statRouteIp.setInt(2, ip.getId());
+                    statRouteIp.executeUpdate();
+                }
             }
             return true;
         } catch (SQLException e) {

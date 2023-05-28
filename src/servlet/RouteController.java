@@ -1,8 +1,11 @@
 package src.servlet;
 
+import src.by.fpmibsu.netside.TraceRoute;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.entity.Ip;
 import src.by.fpmibsu.netside.entity.Route;
+import src.by.fpmibsu.netside.entity.User;
+import src.service.IpService;
 import src.service.RouteService;
 import src.service.UserService;
 
@@ -15,8 +18,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpResponse;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -25,9 +27,12 @@ import java.util.regex.Pattern;
 public class RouteController extends HttpServlet {
     RouteService routeService;
     UserService userService;
+    IpService ipService;
 
     public void init() throws ServletException {
         routeService = new RouteService();
+        userService = new UserService();
+        ipService = new IpService();
     }
 
     @Override
@@ -38,24 +43,51 @@ public class RouteController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String button = request.getParameter("button");
-        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        Integer userId = null;
+        if(request.getParameter("userId") != null) {
+            userId = Integer.valueOf(request.getParameter("userId"));
+        }
+        Ip ip = new Ip(request.getParameter("userIp"));
+        String destinationIp = request.getParameter("destinationIp");
 
         try {
             if("routeButton".equals(button)) {
                 List<Route> routes = routeService.getFirstFiveRoutes();
                 request.setAttribute("routes", routes);
                 request.getRequestDispatcher("routes-list-styled.jsp").forward(request, response);
-            } else if("getRouteButton".equals(button)){
-                List<Ip> ipList = routeService.findRouteByUserId(userId).getIpList();
+            } else if("getRouteButton".equals(button)) {
+                TraceRoute traceRoute = new TraceRoute(new Ip(destinationIp));
+                //List<Ip> ipList = routeService.findRouteByUserId(userId).getIpList();
+                List<Ip> ipList = traceRoute.getListIpFromServerToUser();
+
+                fillDataBase(ipList, new Ip(destinationIp), userId);
                 List<double[]> dotList = getListOfDots(ipList);
+
                 request.setAttribute("dotList", dotList);
-                request.getRequestDispatcher("route-map.jsp").forward(request, response);
+                request.getRequestDispatcher("route-map-styled.jsp").forward(request, response);
             }
         } catch (DaoException e) {
             System.err.println("doPost RouteController failed");
             throw new RuntimeException(e);
         }
 
+    }
+
+    protected void fillDataBase(List<Ip> ipList, Ip end, Integer userId) {
+        try {
+            ipList.add(end);
+            for(Ip ip : ipList) {
+                ipService.create(ip);
+            }
+
+            User user = userService.findUserById(userId);
+            Route route = new Route(user, ipList.size(), ipList, LocalTime.now().toString());
+            routeService.create(route);
+
+        } catch (DaoException e) {
+            System.err.println("Fail with finding user by id in RouteController");
+            throw new RuntimeException(e);
+        }
     }
 
     protected List<double[]> getListOfDots(List<Ip> ips) {
@@ -84,7 +116,10 @@ public class RouteController extends HttpServlet {
                     reader.close();
                     connection.disconnect();
 
-                    dotList.add(getLatLngFromJson(responseData));
+                    double[] latLng = getLatLngFromJson(responseData);
+                    if(latLng != null) {
+                        dotList.add(latLng);
+                    }
                 }
             } catch (Exception e) {
                 System.err.println("Failed in converting ip to dot in RouteController");

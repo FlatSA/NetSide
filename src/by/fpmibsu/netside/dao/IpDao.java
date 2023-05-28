@@ -73,4 +73,20 @@ public class IpDao extends AbstractDao<Ip> {
             throw new DaoException(e.getMessage(), e.getCause());
         }
     }
+
+    public Ip findIp(Ip ip) throws DaoException {
+        String sql = "SELECT * FROM ip WHERE ip_address = ?;";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, ip.getIpAddress());
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                Integer id = resultSet.getInt("id");
+                String ipAddress = resultSet.getString("ip_address");
+                return new Ip(id, ipAddress);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e.getCause());
+        }
+    }
 }

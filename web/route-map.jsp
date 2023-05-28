@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <title>World Map</title>
+    <title>Map</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
     <style>
         /* Beautify the map container */
@@ -26,7 +26,6 @@
     </style>
 </head>
 <body>
-<h1>World Map</h1>
 <div id="map"></div>
 
 <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>

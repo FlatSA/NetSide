@@ -36,7 +36,7 @@
     <thead>
     <tr>
         <th>Username</th>
-        <th>Length</th>
+        <th>Length(Hops)</th>
         <th>Email</th>
     </tr>
     </thead>
