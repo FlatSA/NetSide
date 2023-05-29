@@ -2,6 +2,7 @@ package src.servlet;
 
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.entity.Question;
+import src.by.fpmibsu.netside.entity.Route;
 import src.service.IpService;
 import src.service.QuestionService;
 import src.service.RouteService;
@@ -37,6 +38,8 @@ public class QuestionController extends HttpServlet {
         if("questionButton".equals(button)) {
             try {
                 List<Question> questions = questionService.getTop20Questions();
+                request.setAttribute("questions", questions);
+                request.getRequestDispatcher("question-home-styled.jsp").forward(request, response);
             } catch (DaoException e) {
                 throw new RuntimeException(e);
             }
