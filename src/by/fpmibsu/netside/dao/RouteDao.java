@@ -17,7 +17,7 @@ public class RouteDao extends AbstractDao<Route> {
         super();
     }
 
-    public RouteDao(Connection connection) throws DaoException {
+    public RouteDao(Connection connection) {
         super(connection);
     }
 
@@ -150,7 +150,7 @@ public class RouteDao extends AbstractDao<Route> {
 
     public List<Route> getTopFiveRoutes() throws DaoException {
         List<Route> topRoutes = new ArrayList<>();
-        String sql = "SELECT id FROM route ORDER BY length DESC LIMIT 100";
+        String sql = "SELECT id FROM route ORDER BY length DESC LIMIT 40";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();

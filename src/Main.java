@@ -3,9 +3,11 @@ package src;
 import src.by.fpmibsu.netside.TraceRoute;
 import src.by.fpmibsu.netside.dao.*;
 import src.by.fpmibsu.netside.entity.Ip;
+import src.by.fpmibsu.netside.entity.Question;
 import src.by.fpmibsu.netside.entity.Route;
 import src.by.fpmibsu.netside.entity.User;
 import src.service.IpService;
+import src.service.QuestionService;
 import src.service.RouteService;
 import src.service.UserService;
 import src.servlet.RouteController;
@@ -24,16 +26,14 @@ public class Main {
     static UserService userService;
     static IpService ipService;
 
-    public static void main(String[] args) throws DaoException {
-        routeService = new RouteService();
-        userService = new UserService();
-        ipService = new IpService();
+    public static void main(String[] args) throws DaoException, SQLException, IOException, ClassNotFoundException {
+        QuestionService questionService = null;
+        questionService = new QuestionService();
 
-        TraceRoute traceRoute = new TraceRoute(new Ip("1.1.1.1"));
-        List<Ip> ipList = traceRoute.getListIpFromServerToUser();
+        List<Question> questions = questionService.getTop20Questions();
+        System.out.println(questions.toString());
         //IpService ipService = new IpService();
         //System.out.println(ipService.findIp(new Ip("1.1.1.123142")).getId());
-        fillDataBase(ipList, new Ip("1.1.1.1"), 17);
         /*
         Properties props = new Properties();
         try (FileInputStream fis = new FileInputStream("src/config.properties")) {

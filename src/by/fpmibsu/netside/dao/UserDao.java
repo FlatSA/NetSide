@@ -12,7 +12,7 @@ public class UserDao extends AbstractDao<User> {
         super();
     }
 
-    public UserDao(Connection connection) throws DaoException {
+    public UserDao(Connection connection) {
         super(connection);
     }
 

@@ -1,10 +1,12 @@
 package src.service;
 
+import src.by.fpmibsu.netside.Connector;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.IpDao;
 import src.by.fpmibsu.netside.dao.RouteDao;
 import src.by.fpmibsu.netside.entity.Ip;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,14 +17,12 @@ public class IpService {
 
     public IpService() {
         try {
-            Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://dpg-cgdgd102qv2aq5lnnegg-a.frankfurt-postgres.render.com:5432/net_side?user=user&password=DtBAsqFIMyWL6HCHs7PBreMF9SguZuJi");
-        } catch (SQLException | ClassNotFoundException e) {
-            System.err.println("Connection failed from IpService");
+            connection = Connector.createConnection();
+            ipDao = new IpDao(connection);
+        } catch (ClassNotFoundException | SQLException | IOException e) {
+            System.err.println("Error IpService");
             throw new RuntimeException(e);
         }
-
-        ipDao = new IpDao(connection);
     }
 
     public Ip findIp(Ip ip) throws DaoException {

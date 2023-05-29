@@ -37,4 +37,14 @@
         <servlet-name>RouteController</servlet-name>
         <url-pattern>/route</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>QuestionController</servlet-name>
+        <servlet-class>src.servlet.QuestionController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>QuestionController</servlet-name>
+        <url-pattern>/question</url-pattern>
+    </servlet-mapping>
 </web-app>
