@@ -9,49 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/css/styles.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/js/script.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="first unit test">
+      <change afterPath="$PROJECT_DIR$/lib/postgresql-42.5.4.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetSide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AbstractDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/BaseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/DaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/DaoException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Answer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Ip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Ip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Rating.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Route.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Route.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/SpeedTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/SpeedTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/IpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/IpService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +69,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
     "create.test.in.the.same.root": "true",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "D:/NetSide/testng.xml",
+    "last_opened_file_path": "D:/NetSide/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,6 +83,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\NetSide\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/by/fpmibsu/netside" />
       <recent name="$PROJECT_DIR$/web" />
@@ -301,7 +267,16 @@
       <workItem from="1685431089454" duration="1556000" />
       <workItem from="1685432667055" duration="313000" />
       <workItem from="1685432995563" duration="6376000" />
+      <workItem from="1685445636225" duration="7536000" />
     </task>
+    <task id="LOCAL-00001" summary="first unit test">
+      <created>1685446004475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685446004475</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +292,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="first unit test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
