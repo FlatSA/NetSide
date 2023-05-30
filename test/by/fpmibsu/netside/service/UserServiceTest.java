@@ -14,7 +14,8 @@ public class UserServiceTest extends Assert {
     private void set() throws DaoException {
         userService=new UserService();
         if(userService.getUserByName("Margo")!=null){
-            userService.delete(userService.getUserByName("Margo"));}
+            userService.delete(userService.getUserByName("Margo"));
+        }
     }
 
 
@@ -31,6 +32,10 @@ public class UserServiceTest extends Assert {
 
     @org.testng.annotations.Test(priority =0)
     public void testCreateUser() throws DaoException {
+        assert(userService.createUser("Margo", "11111", "bushmargarita4@gmail.com"));
+    }
+    @org.testng.annotations.Test(priority =1,expectedExceptions = DaoException.class)
+    public void testCreateUser1() throws DaoException {
         assert(userService.createUser("Margo", "11111", "bushmargarita4@gmail.com"));
     }
 

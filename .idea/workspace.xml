@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="first unit test">
-      <change afterPath="$PROJECT_DIR$/lib/postgresql-42.5.4.jar" afterDir="false" />
+    <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="add 3 tests in UserServiceTest, add postgresql library">
+      <change afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/IpServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/RouteServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetSide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +31,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -267,7 +267,7 @@
       <workItem from="1685431089454" duration="1556000" />
       <workItem from="1685432667055" duration="313000" />
       <workItem from="1685432995563" duration="6376000" />
-      <workItem from="1685445636225" duration="7536000" />
+      <workItem from="1685445636225" duration="11916000" />
     </task>
     <task id="LOCAL-00001" summary="first unit test">
       <created>1685446004475</created>
@@ -276,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685446004475</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add 3 tests in UserServiceTest, add postgresql library">
+      <created>1685453413481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685453413481</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +302,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="first unit test" />
+    <MESSAGE value="add 3 tests in UserServiceTest, add postgresql library" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 3 tests in UserServiceTest, add postgresql library" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
