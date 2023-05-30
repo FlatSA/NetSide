@@ -10,20 +10,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test/by/fpmibsu/netside/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/css/styles.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/assetsAskQuestion/js/script.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/WEB-INF/classes/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetSide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/NetSide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AbstractDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/DaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/DaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Answer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Ip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Ip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Rating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Route.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Route.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/SpeedTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/SpeedTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/IpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/IpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,24 +93,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "create.test.in.the.same.root": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "D:/NetSide/testng.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/by/fpmibsu/netside" />
@@ -74,14 +127,39 @@
       <recent name="$PROJECT_DIR$/web/" />
       <recent name="$PROJECT_DIR$/web/login/" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.by.fpmibsu.netside.service" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat">
+  <component name="RunManager" selected="TestNG.D:/NetSide/testng.xml">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Main" />
       <module name="NetSide" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/NetSide/testng.xml" type="TestNG">
+      <module name="NetSide" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="test.by.fpmibsu.netside.service" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +253,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.D:/NetSide/testng.xml" />
       <item itemvalue="Tomcat Server.Tomcat" />
     </list>
   </component>
@@ -219,6 +298,9 @@
       <workItem from="1685352973886" duration="983000" />
       <workItem from="1685355502382" duration="4897000" />
       <workItem from="1685363015013" duration="814000" />
+      <workItem from="1685431089454" duration="1556000" />
+      <workItem from="1685432667055" duration="313000" />
+      <workItem from="1685432995563" duration="6376000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,6 @@ import src.by.fpmibsu.netside.entity.User;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class UserService {
@@ -35,4 +34,9 @@ public class UserService {
     public User findUserById(Integer id) throws DaoException {
         return userDao.findEntityById(id);
     }
+    public boolean delete(User entity) throws DaoException {
+        return userDao.delete(entity);
+    }
+
+
 }
