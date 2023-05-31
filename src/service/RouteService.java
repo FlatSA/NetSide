@@ -36,4 +36,8 @@ public class RouteService {
     public boolean create(Route route) throws DaoException {
         return routeDao.create(route);
     }
+
+    public Route findRouteById(Integer id) throws DaoException {
+        return routeDao.findEntityById(id);
+    }
 }

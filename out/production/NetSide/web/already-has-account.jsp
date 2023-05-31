@@ -28,7 +28,7 @@
                 <h2 class="display-6 fw-bold mb-5">
                     <span class="underline pb-1">Login</span>
                 </h2>
-                <form action="login" method="post">
+                <form action="main" method="get">
                     <div class="mb-3">
                         <input class="shadow form-control" type="text" name="username" placeholder="Your username exists">
                     </div>
@@ -36,7 +36,7 @@
                         <input class="shadow form-control" type="password" name="password" placeholder="Password">
                     </div>
                     <div class="mb-5">
-                        <input class="btn btn-primary shadow" type="submit" value="Log in">
+                        <input class="btn btn-primary shadow" type="submit" value="LogIn">
                     </div>
                     <p class="text-muted"><a href="forgotten-password.html"></a></p>
                 </form>

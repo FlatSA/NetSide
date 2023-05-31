@@ -23,16 +23,16 @@
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"></li>
         <li class="nav-item"><a class="nav-link" href="features.html">Speed test</a></li>
-        <form method="post" action="question">
+        <form method="get" action="main">
           <button type="submit" class="nav-link" name="button" value="questionSearchButton" style="background: none; border: none; cursor: pointer;">Search Question</button>
         </form>
         <li class="nav-item">
-          <form method="post" action="question">
+          <form method="get" action="main">
             <button type="submit" class="nav-link" name="button" value="questionButton" style="background: none; border: none; cursor: pointer;">Questions</button>
           </form>
         </li>
         <li class="nav-item">
-          <form method="post" action="route">
+          <form method="get" action="main">
             <button type="submit" class="nav-link" name="button" value="routeButton" style="background: none; border: none; cursor: pointer;">Routes</button>
           </form>
         </li>
@@ -64,7 +64,7 @@
       <div class="col-md-8 text-center text-md-start mx-auto">
         <div class="text-center">
           <h1 class="display-4 fw-bold mb-5"><br><br></h1>
-          <form class="d-flex justify-content-center flex-wrap" method="post" action="route">
+          <form class="d-flex justify-content-center flex-wrap" method="post" action="main">
             <div class="shadow-lg mb-3"></div>
             <div class="shadow-lg mb-3">
               <input type="hidden" name="userId" value="<%= request.getParameter("userId") %>">

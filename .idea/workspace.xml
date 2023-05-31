@@ -11,45 +11,52 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="add 3 tests in UserServiceTest, add postgresql library">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/TraceRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/TraceRoute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/dao/QuestionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/service/QuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/answer-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/answer-question-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/answer-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/answer-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/service/RouteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/service/RouteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/LogInController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/RouteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/servlet/SignUpController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/logged-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/question-home-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/question-home-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/route-map-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/route-map-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/routes-list-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/routes-list-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/answer-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/answer-question-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/answer-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/answer-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/routes-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/routes-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/web/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/logged-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/question-home-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/question-home-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/route-map-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/route-map-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/routes-list-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/routes-list-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/TraceRoute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/QuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/answer-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/answer-question-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/answer-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/answer-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/routes-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/routes-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/service/RouteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/servlet/RouteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/servlet/SignUpController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/logged-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/question-home-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/question-home-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/route-map-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/route-map-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/routes-list-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/routes-list-styled.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/TraceRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/TraceRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/QuestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/dao/QuestionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/routes-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/routes-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/web/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/RouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/RouteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LogInController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/QuestionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/RouteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/SignUpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/already-has-account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/already-has-account.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/answer-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/answer-question-styled.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/answer-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/answer-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logged-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-fail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/question-home-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/question-home-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/question-home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/question-home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/route-map-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/route-map-styled.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/routes-list-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/routes-list-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/routes-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/routes-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/search-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/search-question-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/search-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/search-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/searched-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/searched-question-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/searched-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/searched-question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TestNG Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,32 +99,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
-    "create.test.in.the.same.root": "true",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "/Users/jar/NetSide",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jar/NetSide&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\NetSide\lib" />
@@ -304,7 +311,7 @@
       <workItem from="1685432667055" duration="313000" />
       <workItem from="1685432995563" duration="6376000" />
       <workItem from="1685445636225" duration="11916000" />
-      <workItem from="1685531487967" duration="20887000" />
+      <workItem from="1685531487967" duration="29023000" />
     </task>
     <task id="LOCAL-00001" summary="first unit test">
       <created>1685446004475</created>

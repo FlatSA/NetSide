@@ -73,10 +73,10 @@
   </div>
 
   <div class="answer-form">
-    <form method="post" action="question">
+    <form method="post" action="main">
       <input type="hidden" name="questionId" value="<%= question.getId() %>">
       <input type="text" class="form-control" name="textAnswerOnTheQuestion" placeholder="Enter your answer" required>
-      <form method="post" action="question">
+      <form method="post" action="main">
         <button type="submit" name="button" value="answerOnTheQuestion">Answer</button>
       </form>
     </form>

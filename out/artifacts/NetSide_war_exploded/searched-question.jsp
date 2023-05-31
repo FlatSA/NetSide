@@ -66,7 +66,7 @@
         <h2><%= question.getMessage() %></h2>
         <p>Username: <%= question.getUser().getLogin() %></p>
         <p class="votes">Votes: <%= question.getVotes() %></p>
-        <form method="post" action="question">
+        <form method="get" action="main">
             <button type="submit" name="button" value="<%= question.getId() %>">Answer</button>
         </form>
     </div>

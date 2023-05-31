@@ -38,10 +38,10 @@
 <body>
 
 <div class="search-container">
-    <form method="post" action="question">
+    <form method="get" action="main">
         <input type="text" class="search-input" name="queryQuestion" placeholder="Enter your search question" required>
         <br>
-        <form method="post" action="question">
+        <form method="get" action="main">
             <button type="submit" class="search-button" name="button" value="searchQuestion">Search</button>
         </form>
     </form>

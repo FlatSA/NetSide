@@ -22,7 +22,7 @@
             <div class="col-md-8 text-center text-md-start mx-auto">
                 <div class="text-center">
                     <h1 class="display-4 fw-bold mb-5">Welcome to NetSide</h1>
-                    <form class="d-flex justify-content-center flex-wrap" method="post" action="login.jsp">
+                    <form class="d-flex justify-content-center flex-wrap" method="get" action="login.jsp">
                         <div class="shadow-lg mb-3"></div>
                         <div class="shadow-lg mb-3"><button class="btn btn-primary" type="submit">Log In</button></div>
                     </form>

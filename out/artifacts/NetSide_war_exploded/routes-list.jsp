@@ -5,51 +5,56 @@
 <head>
     <title>Top Routes</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-            font-family: Arial, sans-serif;
+        .route-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
         }
 
-        th {
-            background-color: #f2f2f2;
-            padding: 10px;
+        .route-box {
+            width: 400px;
+            padding: 20px;
+            border-radius: 4px;
+            background-color: #f6f6f6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            margin-bottom: 20px;
         }
 
-        td {
-            padding: 10px;
+        .route-box:hover {
+            background-color: #ddd;
         }
 
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .route-box a {
+            color: #333;
+            text-decoration: none;
         }
 
-        tr:hover {
-            background-color: #f5f5f5;
+        .route-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 <h1>Routes</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Username</th>
-        <th>Length(Hops)</th>
-        <th>Email</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="route-container">
     <% List<Route> routes = (List<Route>) request.getAttribute("routes");
-        for (Route route : routes) { %>
-    <tr>
-        <td><%= route.getUser().getLogin() %></td>
-        <td><%= route.getLength() %></td>
-        <td><%= route.getUser().getEmail() %></td>
-    </tr>
+        for (int i = 0; i < routes.size(); i++) {
+            Route route = routes.get(i);
+    %>
+    <div class="route-box" onclick="document.getElementById('routeForm<%= route.getId() %>').submit();">
+        <form id="routeForm<%= route.getId() %>" method="get" action="main">
+            <input type="hidden" name="routeId" value="<%= route.getId() %>">
+            <input type="hidden" name="source" value="route-box">
+            <p><strong>Username:</strong> <%= route.getUser().getLogin() %></p>
+            <p><strong>Length (Hops):</strong> <%= route.getLength() %></p>
+            <p><strong>Email:</strong> <%= route.getUser().getEmail() %></p>
+        </form>
+    </div>
     <% } %>
-    </tbody>
-</table>
+</div>
 </body>
 </html>

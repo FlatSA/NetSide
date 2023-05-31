@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-5 col-xl-4 text-center text-md-start">
                 <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Sign up</strong></span></h2>
-                <form action="signup" method="post">
+                <form action="main" method="post">
                     <div class="mb-3">
                         <input class="shadow-sm form-control" type="email" name="email" placeholder="Email">
                     </div>
@@ -36,7 +36,7 @@
                     <input class="shadow-sm form-control" type="password" name="password" placeholder="Password">
                     <div class="mb-3"></div>
                     <div class="mb-5">
-                        <input class="btn btn-primary shadow" type="submit" value="Create account">
+                        <input class="btn btn-primary shadow" type="submit" name="button" value="Create account">
                     </div>
                     <p class="text-muted">Have an account? <a href="login.jsp">Log in&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
