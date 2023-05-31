@@ -1,5 +1,6 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.Answer;
 import src.by.fpmibsu.netside.entity.Question;
 import src.by.fpmibsu.netside.entity.User;
@@ -18,10 +19,11 @@ public class AnswerDao extends AbstractDao<Answer> {
     public AnswerDao(Connection connection) {
         setConnection(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(AnswerDao.class.getName());
     @Override
     public Answer findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM answer WHERE id = ?;";
+        LOGGER.info("findEntityById: "+id);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -42,6 +44,7 @@ public class AnswerDao extends AbstractDao<Answer> {
     @Override
     public boolean delete(Answer entity) throws DaoException {
         String sql = "DELETE FROM answer WHERE id = ?;";
+        LOGGER.info("delete: "+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
            statement.setInt(1, entity.getId());
            int ret = statement.executeUpdate();
@@ -54,6 +57,7 @@ public class AnswerDao extends AbstractDao<Answer> {
     @Override
     public boolean create(Answer entity) throws DaoException {
         String sql = "INSERT INTO answer (message, user_id, question_id) VALUES(?, ?, ?);";
+        LOGGER.info("create: "+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getMessage());
             statement.setInt(2, entity.getUser().getId());
@@ -68,6 +72,7 @@ public class AnswerDao extends AbstractDao<Answer> {
     @Override
     public boolean update(Answer entity) throws DaoException {
         String sql = "UPDATE answer SET message = ?, user_id = ?, question_id = ? WHERE id = ?;";
+        LOGGER.info("update: "+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
            statement.setString(1, entity.getMessage());
            statement.setInt(2, entity.getUser().getId());

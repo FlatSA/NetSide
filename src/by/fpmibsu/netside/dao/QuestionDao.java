@@ -1,6 +1,9 @@
 package src.by.fpmibsu.netside.dao;
 
-import src.by.fpmibsu.netside.entity.*;
+import org.apache.log4j.Logger;
+import src.by.fpmibsu.netside.entity.Answer;
+import src.by.fpmibsu.netside.entity.Question;
+import src.by.fpmibsu.netside.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,9 +21,10 @@ public class QuestionDao extends AbstractDao<Question> {
     public QuestionDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(QuestionDao.class.getName());
     public List<Question> findAll() throws DaoException {
         String sql = "SELECT * FROM question;";
+        LOGGER.info("findAll");
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();
             List<Question> questions = new ArrayList<>();
@@ -42,6 +46,7 @@ public class QuestionDao extends AbstractDao<Question> {
     @Override
     public Question findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM question WHERE id = ?;";
+        LOGGER.info("findEntityById: "+ id);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -63,6 +68,7 @@ public class QuestionDao extends AbstractDao<Question> {
     @Override
     public boolean delete(Question entity) throws DaoException {
         String sql = "DELETE FROM question WHERE id = ?;";
+        LOGGER.info("delete"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)){
            statement.setInt(1, entity.getId());
            int ret = statement.executeUpdate();
@@ -75,6 +81,7 @@ public class QuestionDao extends AbstractDao<Question> {
     @Override
     public boolean create(Question entity) throws DaoException {
         String sql = "INSERT INTO question (user_id, message, votes) VALUES(?, ?, ?) RETURNING id;";
+        LOGGER.info("create"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getUser().getId());
             statement.setString(2, entity.getMessage());
@@ -88,11 +95,13 @@ public class QuestionDao extends AbstractDao<Question> {
         } catch(SQLException e) {
             throw new DaoException(e.getMessage(), e.getCause());
         }
+
     }
 
     @Override
     public boolean update(Question entity) throws DaoException {
         String sql = "UPDATE question SET message = ?, votes = ? WHERE id = ?;";
+        LOGGER.info("update"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
            statement.setString(1, entity.getMessage());
            statement.setInt(2, entity.getVotes());
@@ -106,6 +115,7 @@ public class QuestionDao extends AbstractDao<Question> {
 
     public void getAnswers(Question entity) throws DaoException {
         String sql = "SELECT * FROM answer WHERE question_id = ?;";
+        LOGGER.info("getAnswers"+ entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
            statement.setInt(1, entity.getId());
            ResultSet resultSet = statement.executeQuery();
@@ -128,6 +138,7 @@ public class QuestionDao extends AbstractDao<Question> {
     public List<Question> getTop20Questions() throws DaoException {
         String sql = "SELECT * FROM question ORDER BY votes DESC LIMIT 20";
         List<Question> questions = new ArrayList<>();
+        LOGGER.info("getTop20Questions");
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();
             UserDao userDao = new UserDao(connection);
@@ -149,6 +160,7 @@ public class QuestionDao extends AbstractDao<Question> {
     public List<Question> getAllQuestions() throws DaoException {
         String sql = "SELECT * FROM question";
         List<Question> questions = new ArrayList<>();
+        LOGGER.info("getAllQuestions");
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();
             UserDao userDao = new UserDao(connection);

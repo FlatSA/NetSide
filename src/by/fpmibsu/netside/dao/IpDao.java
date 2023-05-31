@@ -1,5 +1,6 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.*;
 
 import java.sql.Connection;
@@ -16,10 +17,11 @@ public class IpDao extends AbstractDao<Ip> {
     public IpDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(IpDao.class.getName());
     @Override
     public Ip findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM ip WHERE id = ?;";
+        LOGGER.info("findEntityById"+id);
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -36,6 +38,7 @@ public class IpDao extends AbstractDao<Ip> {
     @Override
     public boolean delete(Ip entity) throws DaoException {
         String sql = "DELETE FROM ip WHERE id = ?;";
+        LOGGER.info("delete"+entity.getId());
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             int ret = statement.executeUpdate();
@@ -48,6 +51,7 @@ public class IpDao extends AbstractDao<Ip> {
     @Override
     public boolean create(Ip entity) throws DaoException {
         String sql = "INSERT INTO ip (ip_address) VALUES (?) RETURNING id;";
+        LOGGER.info("create: "+entity.getId());
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getIpAddress());
             ResultSet resultSet = statement.executeQuery();
@@ -64,6 +68,7 @@ public class IpDao extends AbstractDao<Ip> {
     @Override
     public boolean update(Ip entity) throws DaoException {
         String sql = "UPDATE ip SET ip_address = ? WHERE id = ?;";
+        LOGGER.info("update: "+entity.getId());
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getIpAddress());
             statement.setInt(2, entity.getId());
@@ -76,6 +81,7 @@ public class IpDao extends AbstractDao<Ip> {
 
     public Ip findIp(Ip ip) throws DaoException {
         String sql = "SELECT * FROM ip WHERE ip_address = ?;";
+        LOGGER.info("findIp: "+ip);
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, ip.getIpAddress());
             ResultSet resultSet = statement.executeQuery();

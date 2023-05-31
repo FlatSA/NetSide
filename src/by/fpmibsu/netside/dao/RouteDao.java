@@ -1,12 +1,14 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.Ip;
 import src.by.fpmibsu.netside.entity.Route;
 import src.by.fpmibsu.netside.entity.User;
 
-import java.net.InetAddress;
-import java.net.NoRouteToHostException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,13 +22,13 @@ public class RouteDao extends AbstractDao<Route> {
     public RouteDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(RouteDao.class.getName());
     @Override
     public Route findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM route WHERE id = ?;";
         String sqlRatingIp = "SELECT * FROM ip WHERE id IN (SELECT ip_id FROM route_ip WHERE route_id = ?);";
         List<Ip> ipList = new ArrayList<>();
-
+        LOGGER.info("findEntityById: "+id);
         try (PreparedStatement statement = connection.prepareStatement(sqlRatingIp)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -59,6 +61,7 @@ public class RouteDao extends AbstractDao<Route> {
                     "WHERE user_id = ? \n" +
                     "ORDER BY id DESC \n" +
                     "LIMIT 1;\n";
+        LOGGER.info("findRouteIdByUserId: "+id);
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -74,6 +77,7 @@ public class RouteDao extends AbstractDao<Route> {
 
     @Override
     public boolean delete(Route entity) throws DaoException {
+        LOGGER.info("delete: "+entity.getId());
         String sql = "DELETE FROM route WHERE id = ?;";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
@@ -87,6 +91,7 @@ public class RouteDao extends AbstractDao<Route> {
     //add ip separately and first
     @Override
     public boolean create(Route entity) throws DaoException {
+        LOGGER.info("create: "+entity.getId());
         String sql = "INSERT INTO route (user_id, length, created_at) VALUES (?, ?, ?) RETURNING id;";
         String sqlRouteIp = "INSERT INTO route_ip (route_id, ip_id) VALUES (?, ?);";
         String sqlExistRouteIp = "SELECT * FROM route_ip WHERE route_id = ? AND ip_id = ?";
@@ -135,6 +140,7 @@ public class RouteDao extends AbstractDao<Route> {
 
     @Override
     public boolean update(Route entity) throws DaoException {
+        LOGGER.info("update: "+entity.getId());
         String sql = "UPDATE route SET user_id = ?, length = ?, created_at = ? WHERE id = ?;";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getUser().getId());
@@ -151,6 +157,7 @@ public class RouteDao extends AbstractDao<Route> {
     public List<Route> getTopFiveRoutes() throws DaoException {
         List<Route> topRoutes = new ArrayList<>();
         String sql = "SELECT id FROM route ORDER BY length DESC LIMIT 40";
+        LOGGER.info("getTopFiveRoutes");
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet resultSet = statement.executeQuery();

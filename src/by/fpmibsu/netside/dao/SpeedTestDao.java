@@ -1,5 +1,6 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.SpeedTest;
 import src.by.fpmibsu.netside.entity.User;
 
@@ -19,10 +20,11 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
     public SpeedTestDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(SpeedTestDao.class.getName());
     @Override
     public SpeedTest findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM speed_test WHERE id = ?;";
+        LOGGER.info("findEntityById: "+ id);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
            statement.setInt(1, id);
            ResultSet resultSet = statement.executeQuery();
@@ -43,6 +45,7 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
     @Override
     public boolean delete(SpeedTest entity) throws DaoException {
         String sql = "DELETE FROM speed_test WHERE id = ?;";
+        LOGGER.info("delete"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             int ret = statement.executeUpdate();
@@ -56,6 +59,7 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
     public boolean create(SpeedTest entity) throws DaoException {
         String sql = "INSERT INTO speed_test (user_id, upload_speed, download_speed, ping) " +
                 "VALUES(?, ?, ?, ?) RETURNING id;";
+        LOGGER.info("create"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getUser().getId());
             statement.setDouble(2, entity.getUploadSpeed());
@@ -75,6 +79,7 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
     @Override
     public boolean update(SpeedTest entity) throws DaoException {
         String sql = "UPDATE speed_test SET upload_speed = ?, download_speed = ?, ping = ? WHERE id = ?;";
+        LOGGER.info("update"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setDouble(1, entity.getUploadSpeed());
             statement.setDouble(2, entity.getDownloadSpeed());

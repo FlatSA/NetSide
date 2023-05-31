@@ -1,8 +1,8 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.Rating;
 import src.by.fpmibsu.netside.entity.Route;
-import src.by.fpmibsu.netside.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,10 +18,11 @@ public class RatingDao extends AbstractDao<Rating> {
     public RatingDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(RatingDao.class.getName());
     @Override
     public Rating findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM rating WHERE id = ?;";
+        LOGGER.info("findEntityById: "+ id);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -41,6 +42,7 @@ public class RatingDao extends AbstractDao<Rating> {
     @Override
     public boolean delete(Rating entity) throws DaoException {
         String sql = "DELETE FROM rating WHERE id = ?;";
+        LOGGER.info("delete"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             int ret = statement.executeUpdate();
@@ -53,6 +55,7 @@ public class RatingDao extends AbstractDao<Rating> {
     @Override
     public boolean create(Rating entity) throws DaoException {
         String sql = "INSERT INTO rating (route_id, value) VALUES (?, ?) RETURNING id;";
+        LOGGER.info("create"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getRoute().getId());
             statement.setInt(2, entity.getValue());
@@ -70,6 +73,7 @@ public class RatingDao extends AbstractDao<Rating> {
     @Override
     public boolean update(Rating entity) throws DaoException {
         String sql = "UPDATE rating SET value = ? WHERE id = ?;";
+        LOGGER.info("update"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getValue());
             statement.setInt(2, entity.getId());

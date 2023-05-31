@@ -1,5 +1,6 @@
 package src.by.fpmibsu.netside.dao;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.*;
 
 import java.sql.*;
@@ -15,7 +16,7 @@ public class UserDao extends AbstractDao<User> {
     public UserDao(Connection connection) {
         super(connection);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(UserDao.class.getName());
     public List<User> findAll() throws DaoException {
         String sql = "SELECT * FROM \"user\";";
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -37,6 +38,7 @@ public class UserDao extends AbstractDao<User> {
     @Override
     public User findEntityById(Integer id) throws DaoException {
         String sql = "SELECT * FROM \"user\" WHERE id = ?;";
+        LOGGER.info("findEntityById: "+ id);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -55,6 +57,7 @@ public class UserDao extends AbstractDao<User> {
     @Override
     public boolean delete(User entity) throws DaoException {
         String sql = "DELETE FROM \"user\" WHERE id = ?;";
+        LOGGER.info("delete"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             int ret = statement.executeUpdate();
@@ -67,6 +70,7 @@ public class UserDao extends AbstractDao<User> {
     @Override
     public boolean create(User entity) throws DaoException {
         String sql = "INSERT INTO \"user\" (login, password, email) VALUES (?, ?, ?) RETURNING id;";
+        LOGGER.info("create"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getLogin());
             statement.setString(2, entity.getPassword());
@@ -85,6 +89,7 @@ public class UserDao extends AbstractDao<User> {
     @Override
     public boolean update(User entity) throws DaoException {
         String sql = "UPDATE \"user\" SET login = ?, password = ?, email = ? WHERE id = ?;";
+        LOGGER.info("update"+entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getLogin());
             statement.setString(2, entity.getPassword());
@@ -99,6 +104,7 @@ public class UserDao extends AbstractDao<User> {
 
     public void getQuestions(User entity) throws DaoException {
         String sql = "SELECT * FROM question WHERE user_id = ?;";
+        LOGGER.info("getQuestions"+ entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
@@ -118,6 +124,7 @@ public class UserDao extends AbstractDao<User> {
 
     public void getAnswers(User entity) throws DaoException {
         String sql = "SELECT * FROM answer WHERE user_id = ?;";
+        LOGGER.info("getAnswers"+ entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
@@ -136,6 +143,7 @@ public class UserDao extends AbstractDao<User> {
 
     public void getRoutes(User entity) throws DaoException {
         String sql = "SELECT * FROM route WHERE user_id = ?;";
+        LOGGER.info("getRoutes"+ entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
@@ -155,6 +163,7 @@ public class UserDao extends AbstractDao<User> {
 
     public void getSpeedTests(User entity) throws DaoException {
         String sql = "SELECT * FROM speed_test WHERE user_id = ?;";
+        LOGGER.info("getSpeedTests"+ entity.getId());
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, entity.getId());
             ResultSet resultSet = statement.executeQuery();
@@ -175,6 +184,7 @@ public class UserDao extends AbstractDao<User> {
 
     public User getUserByName(String username) throws DaoException {
         String sql = "SELECT * FROM \"user\" WHERE login = ?;";
+        LOGGER.info("getUserByName"+ username);
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();
