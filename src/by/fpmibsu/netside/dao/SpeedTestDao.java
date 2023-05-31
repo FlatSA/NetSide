@@ -87,12 +87,12 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
         }
     }
 
-    public List<SpeedTest> getFirstFiveSP(User user) throws DaoException {
+    public List<SpeedTest> getFirstFiveSP(int userId) throws DaoException {
         List<SpeedTest> list = new ArrayList<>();
         String sql = "SELECT id FROM speed_test WHERE user_id = ? LIMIT 5";
 
         try(PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, user.getId());
+            statement.setInt(1, userId);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()) {
                 Integer id = resultSet.getInt("id");

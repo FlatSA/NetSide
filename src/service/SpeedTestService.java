@@ -4,7 +4,6 @@ import src.by.fpmibsu.netside.Connector;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.SpeedTestDao;
 import src.by.fpmibsu.netside.entity.SpeedTest;
-import src.by.fpmibsu.netside.entity.User;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -25,8 +24,8 @@ public class SpeedTestService {
         }
     }
 
-    public List<SpeedTest> getFirstFiveSP(User user) throws DaoException {
-        return spDao.getFirstFiveSP(user);
+    public List<SpeedTest> getFirstFiveSP(int userId) throws DaoException {
+        return spDao.getFirstFiveSP(userId);
     }
 
     public SpeedTest findSpeedTest(SpeedTest speedTest) throws DaoException {
