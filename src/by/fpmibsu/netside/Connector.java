@@ -22,5 +22,6 @@ public class Connector {
     public static Connection createConnection() throws SQLException, IOException, ClassNotFoundException {
         return dataSource.getConnection();
     }
+
 }
 

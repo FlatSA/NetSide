@@ -1,5 +1,6 @@
 package src.servlet;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.SearchEngine;
 import src.by.fpmibsu.netside.TraceRoute;
 import src.by.fpmibsu.netside.dao.DaoException;
@@ -24,6 +25,7 @@ public class Controller extends HttpServlet {
     private IpService ipService = null;
     private QuestionService questionService = null;
     private AnswerService answerService = null;
+    private static final Logger LOGGER = Logger.getLogger(Controller.class.getName());
 
     public void init() throws ServletException {
         userService = new UserService();
@@ -36,7 +38,7 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String button = request.getParameter("button");
-
+        LOGGER.info("doPost");
         try {
             if ("getRouteButton".equals(button)) {
 
@@ -80,7 +82,7 @@ public class Controller extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String button = request.getParameter("button");
         String source = request.getParameter("source");
-
+        LOGGER.info("doGet");
         try {
             if ("LogIn".equals(button)) {
                 String username = request.getParameter("username");
@@ -141,6 +143,7 @@ public class Controller extends HttpServlet {
     }
 
     protected void fillDataBaseWithIp(List<Ip> ipList, Ip end, Integer userId) {
+        LOGGER.info("fillDataBaseWithIp");
         try {
             ipList.add(end);
             for(Ip ip : ipList) {
@@ -158,6 +161,7 @@ public class Controller extends HttpServlet {
     }
 
     public boolean isInteger(String str) {
+        LOGGER.info("isInteger "+ str);
         try {
             Integer.parseInt(str);
             return true;
