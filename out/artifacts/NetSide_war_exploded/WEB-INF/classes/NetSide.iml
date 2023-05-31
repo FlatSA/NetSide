@@ -49,5 +49,6 @@
     <orderEntry type="library" name="postgresql-42.5.4" level="project" />
     <orderEntry type="library" name="testng" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="zaxxer.HikariCP" level="project" />
   </component>
 </module>

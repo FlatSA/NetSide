@@ -5,6 +5,7 @@ import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.IpDao;
 import src.by.fpmibsu.netside.entity.Ip;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -16,7 +17,7 @@ public class IpService {
         try {
             connection = Connector.createConnection();
             ipDao = new IpDao(connection);
-        } catch (SQLException e) {
+        } catch (SQLException | IOException | ClassNotFoundException e) {
             System.err.println("Error IpService");
             throw new RuntimeException(e);
         }

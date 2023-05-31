@@ -6,7 +6,7 @@
 <head>
     <title>Questions</title>
     <style>
-        /* Add some additional styling for the new elements */
+        /* Styles for the elements */
         .ask-button {
             display: inline-block;
             margin-top: 20px;
@@ -25,7 +25,6 @@
             margin-bottom: 20px;
         }
 
-        /* Updated table styling to resemble Stack Overflow */
         table {
             width: 100%;
             border-collapse: separate;
@@ -56,11 +55,14 @@
 </head>
 <body>
 <h1>Routes</h1>
-<a href="/ask" class="ask-button">Ask Question</a> <!-- Add the "Ask Question" button -->
+<a href="/ask" class="ask-button">Ask Question</a>
 
 <div class="search-bar">
-    <!-- Add your search bar HTML here -->
-    <!-- Example: <input type="text" name="search" placeholder="Search questions..."> -->
+    <!-- Add the search form -->
+    <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Search questions..." required>
+        <button type="submit">Search</button>
+    </form>
 </div>
 
 <table>

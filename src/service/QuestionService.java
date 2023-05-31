@@ -5,6 +5,7 @@ import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.QuestionDao;
 import src.by.fpmibsu.netside.entity.Question;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class QuestionService {
         try {
             connection = Connector.createConnection();
             questionDao = new QuestionDao(connection);
-        } catch (SQLException e) {
+        } catch (SQLException | IOException | ClassNotFoundException e) {
             System.err.println("Error QuestionService");
             throw new RuntimeException(e);
         }

@@ -5,6 +5,7 @@ import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.RouteDao;
 import src.by.fpmibsu.netside.entity.Route;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -17,7 +18,7 @@ public class RouteService {
         try {
             connection = Connector.createConnection();
             routeDao = new RouteDao(connection);
-        } catch (SQLException e) {
+        } catch (SQLException | IOException | ClassNotFoundException e) {
             System.err.println("Error RouteService");
             throw new RuntimeException(e);
         }

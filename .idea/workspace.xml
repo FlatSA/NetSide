@@ -11,9 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="add 3 tests in UserServiceTest, add postgresql library">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetSide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/question-home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/question-home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +72,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -141,7 +138,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a3dd7594-d370-4d5c-9b04-d1d06e8af54c" />
+        <option name="BASE_DIRECTORY_NAME" value="49155e4d-2213-4edd-92f6-5c878d7ca35f" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -149,7 +146,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="65399" />
+        <option name="DEBUG_PORT" value="55378" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -269,7 +266,7 @@
       <workItem from="1685432667055" duration="313000" />
       <workItem from="1685432995563" duration="6376000" />
       <workItem from="1685445636225" duration="11916000" />
-      <workItem from="1685531487967" duration="2164000" />
+      <workItem from="1685531487967" duration="3247000" />
     </task>
     <task id="LOCAL-00001" summary="first unit test">
       <created>1685446004475</created>

@@ -1,5 +1,21 @@
 package src.by.fpmibsu.netside;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Connector {
+    public static Connection createConnection() throws ClassNotFoundException, SQLException, IOException {
+        String connectionUrl = "jdbc:postgresql://dpg-cgdgd102qv2aq5lnnegg-a.frankfurt-postgres.render.com:5432/net_side?user=user&password=DtBAsqFIMyWL6HCHs7PBreMF9SguZuJi";
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(connectionUrl);
+        return connection;
+    }
+}
+/*
+package src.by.fpmibsu.netside;
+
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -21,3 +37,4 @@ public class Connector {
         return dataSource.getConnection();
     }
 }
+ */
