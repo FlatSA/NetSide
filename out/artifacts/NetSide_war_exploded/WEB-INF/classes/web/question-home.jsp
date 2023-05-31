@@ -7,82 +7,71 @@
     <title>Questions</title>
     <style>
         /* Styles for the elements */
-        .ask-button {
-            display: inline-block;
-            margin-top: 20px;
-            margin-right: 20px;
-            padding: 10px 20px;
-            background-color: #f2f2f2;
-            color: #333;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 4px;
-            border: 1px solid #ccc;
+        .questions-container {
+            width: 800px;
+            margin: 0 auto;
         }
 
-        .search-bar {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        th {
+        .question {
             background-color: #f6f6f6;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+        .question h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
-        .question-row:hover {
-            background-color: #f9f9f9;
+        .question p {
+            margin-bottom: 5px;
         }
 
-        .question-row:last-child td {
-            border-bottom: none;
+        .question .votes {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .question .tags {
+            margin-top: 10px;
+        }
+
+        /* Minimalistic button style */
+        .question button {
+            background-color: #f6f6f6;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .question button:hover {
+            background-color: #ddd;
+        }
+
+        .question button:focus {
+            outline: none;
         }
     </style>
 </head>
 <body>
-<h1>Routes</h1>
-<a href="/ask" class="ask-button">Ask Question</a>
 
-<div class="search-bar">
-    <!-- Add the search form -->
-    <form action="/search" method="get">
-        <input type="text" name="query" placeholder="Search questions..." required>
-        <button type="submit">Search</button>
-    </form>
-</div>
-
-<table>
-    <thead>
-    <tr>
-        <th>Username</th>
-        <th>Message</th>
-        <th>Votes</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="questions-container">
     <% List<Question> questions = (List<Question>) request.getAttribute("questions");
         for (Question question : questions) { %>
-    <tr class="question-row">
-        <td><%= question.getUser().getLogin() %></td>
-        <td><%= question.getMessage() %></td>
-        <td><%= question.getVotes() %></td>
-    </tr>
+    <div class="question">
+        <h2><%= question.getMessage() %></h2>
+        <p>Username: <%= question.getUser().getLogin() %></p>
+        <p class="votes">Votes: <%= question.getVotes() %></p>
+        <form method="post" action="question">
+            <button type="submit" name="button" value="<%= question.getId() %>">Answer</button>
+        </form>
+    </div>
     <% } %>
-    </tbody>
-</table>
+</div>
 </body>
 </html>

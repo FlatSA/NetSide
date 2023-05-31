@@ -16,6 +16,12 @@ public class Answer extends Entity {
         this.question = question;
     }
 
+    public Answer(String message, Question question) {
+        this.message = message;
+        this.question = question;
+        this.user = new User(0, "base", "base", "base@gmail.com");
+    }
+
     public Answer(Integer id, String message, User user, Question question) {
         super(id);
         this.message = message;

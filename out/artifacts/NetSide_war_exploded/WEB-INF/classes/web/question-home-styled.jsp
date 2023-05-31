@@ -25,7 +25,6 @@
                 <li class="nav-item"></li>
                 <li class="nav-item"><a class="nav-link" href="features.html">Speed test</a></li>
                 <li class="nav-item"><a class="nav-link" href="integrations.html">Search Question</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Top Questions</a></li>
                 <li class="nav-item">
                     <form method="post" action="route">
                         <button type="submit" class="nav-link" name="button" value="routeButton" style="background: none; border: none; cursor: pointer;">Routes</button>
@@ -35,9 +34,15 @@
         </div>
     </div>
 </nav>
-<section>
-    <jsp:include page="question-home.jsp" />
-</section>
+<header class="pt-5">
+    <div class="container pt-4 pt-xl-5">
+        <div class="row pt-5">
+        <section>
+            <jsp:include page="question-home.jsp" />
+        </section>
+        </div>
+    </div>
+</header>
 <footer></footer>
 <script src="style/assetsLoggedUser/bootstrap/js/bootstrap.min.js"></script>
 <script src="style/assetsLoggedUser/js/script.min.js"></script>

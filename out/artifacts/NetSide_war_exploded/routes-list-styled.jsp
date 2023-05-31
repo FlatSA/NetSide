@@ -16,8 +16,6 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"></li>
                 <li class="nav-item"><a class="nav-link" href="features.html">Speed test</a></li>
-                <li class="nav-item"><a class="nav-link" href="integrations.html">Search Question</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Top Questions</a></li>
                 <li class="nav-item">
                     <form method="post" action="route">
                         <button type="submit" class="nav-link" style="background: none; border: none; cursor: pointer;">Routes</button>

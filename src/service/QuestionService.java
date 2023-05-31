@@ -30,4 +30,8 @@ public class QuestionService {
         questionList = questionDao.getTop20Questions();
         return questionList;
     }
+
+    public Question findQuestionById(Integer id) throws DaoException {
+        return questionDao.findEntityById(id);
+    }
 }
