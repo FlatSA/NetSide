@@ -1,5 +1,6 @@
 package src.servlet;
 
+import src.by.fpmibsu.netside.SearchEngine;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.entity.Question;
 import src.service.AnswerService;
@@ -53,6 +54,19 @@ public class QuestionController extends HttpServlet {
                 Integer questionId = Integer.valueOf(request.getParameter("questionId"));
                 answerService.createAnswer(questionId, message);
                 response.sendRedirect("logged-user.jsp");
+            } catch (DaoException e) {
+                throw new RuntimeException(e);
+            }
+        } else if("questionSearchButton".equals(button)) {
+            response.sendRedirect("search-question-styled.jsp");
+        } else if("searchQuestion".equals(button)) {
+            try {
+                String query = request.getParameter("queryQuestion");
+                List<Question> questions = questionService.getAllQuestions();
+                SearchEngine searchEngine = new SearchEngine(questions, query);
+                Question closestQuestion = searchEngine.getClosestQuestion();
+                request.setAttribute("closestQuestion", closestQuestion);
+                request.getRequestDispatcher("searched-question-styled.jsp").forward(request, response);
             } catch (DaoException e) {
                 throw new RuntimeException(e);
             }

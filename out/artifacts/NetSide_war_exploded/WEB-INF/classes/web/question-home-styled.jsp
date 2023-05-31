@@ -24,7 +24,12 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"></li>
                 <li class="nav-item"><a class="nav-link" href="features.html">Speed test</a></li>
-                <li class="nav-item"><a class="nav-link" href="integrations.html">Search Question</a></li>
+                <form method="post" action="question">
+                    <button type="submit" class="nav-link" name="button" value="questionSearchButton" style="background: none; border: none; cursor: pointer;">Search Question</button>
+                </form>
+                <form method="post" action="question">
+                    <button type="submit" class="nav-link" name="button" value="questionButton" style="background: none; border: none; cursor: pointer;">Questions</button>
+                </form>
                 <li class="nav-item">
                     <form method="post" action="route">
                         <button type="submit" class="nav-link" name="button" value="routeButton" style="background: none; border: none; cursor: pointer;">Routes</button>

@@ -46,7 +46,7 @@
     .answer-form input[type="text"] {
       width: 800px;
       margin-bottom: 10px;
-      text-align: center;
+      text-align: left;
     }
 
     .answer-form button {

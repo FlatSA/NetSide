@@ -145,4 +145,25 @@ public class QuestionDao extends AbstractDao<Question> {
         }
         return questions;
     }
+
+    public List<Question> getAllQuestions() throws DaoException {
+        String sql = "SELECT * FROM question";
+        List<Question> questions = new ArrayList<>();
+        try(PreparedStatement statement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = statement.executeQuery();
+            UserDao userDao = new UserDao(connection);
+            while(resultSet.next()) {
+                Integer id = resultSet.getInt("id");
+                Integer userId = resultSet.getInt("user_id");
+                String message = resultSet.getString("message");
+                Integer votes = resultSet.getInt("votes");
+                User user = userDao.findEntityById(userId);
+                questions.add(new Question(id, user, message, votes));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error while getting all questions in QuestionDao");
+            throw new RuntimeException(e);
+        }
+        return questions;
+    }
 }

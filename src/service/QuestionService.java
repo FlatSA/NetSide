@@ -34,4 +34,8 @@ public class QuestionService {
     public Question findQuestionById(Integer id) throws DaoException {
         return questionDao.findEntityById(id);
     }
+
+    public List<Question> getAllQuestions() throws DaoException {
+        return questionDao.getAllQuestions();
+    }
 }

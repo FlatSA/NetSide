@@ -5,13 +5,11 @@ import src.by.fpmibsu.netside.entity.Ip;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TraceRoute {
-    Ip destinationIp;
+    private Ip destinationIp;
 
     public TraceRoute(Ip destinationIp) {
         this.destinationIp = destinationIp;
