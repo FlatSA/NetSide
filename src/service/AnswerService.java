@@ -1,5 +1,6 @@
 package src.service;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.Connector;
 import src.by.fpmibsu.netside.dao.AnswerDao;
 import src.by.fpmibsu.netside.dao.DaoException;
@@ -18,7 +19,7 @@ public class AnswerService {
     private AnswerDao answerDao = null;
     private UserDao userDao = null;
     private QuestionDao questionDao = null;
-
+    private static final Logger LOGGER = Logger.getLogger(AnswerService.class.getName());
     public AnswerService()  {
         try {
             connection = Connector.createConnection();
@@ -32,6 +33,7 @@ public class AnswerService {
     }
 
     public boolean createAnswer(Integer questionId, String message) throws DaoException {
+        LOGGER.info("createAnswer: "+questionId);
         Question question = questionDao.findEntityById(questionId);
         return answerDao.create(new Answer(message, question));
     }

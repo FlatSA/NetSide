@@ -1,5 +1,6 @@
 package src.service;
 
+import org.apache.log4j.Logger;
 import src.by.fpmibsu.netside.entity.Ip;
 
 import java.io.BufferedReader;
@@ -13,7 +14,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DrawService {
+    private static final Logger LOGGER = Logger.getLogger(DrawService.class.getName());
     public static List<double[]> getListOfDots(List<Ip> ips) {
+        LOGGER.info("getListOfDots");
         List<double[]> dotList = new ArrayList<>();
 
         for (Ip ip : ips) {
@@ -54,6 +57,7 @@ public class DrawService {
     }
 
     private static double[] getLatLngFromJson(String jsonString) {
+        LOGGER.info("getLatLngFromJson");
         Pattern pattern = Pattern.compile("-?\\d+\\.\\d+,-?\\d+\\.\\d+");
         Matcher matcher = pattern.matcher(jsonString);
         if (matcher.find()) {
