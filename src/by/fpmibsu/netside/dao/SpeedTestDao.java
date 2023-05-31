@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpeedTestDao extends AbstractDao<SpeedTest> {
 
@@ -83,5 +85,24 @@ public class SpeedTestDao extends AbstractDao<SpeedTest> {
         } catch(SQLException e) {
             throw new DaoException(e.getMessage(), e.getCause());
         }
+    }
+
+    public List<SpeedTest> getFirstFiveSP(User user) throws DaoException {
+        List<SpeedTest> list = new ArrayList<>();
+        String sql = "SELECT id FROM speed_test WHERE user_id = ? LIMIT 5";
+
+        try(PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, user.getId());
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()) {
+                Integer id = resultSet.getInt("id");
+                SpeedTest speedTest = findEntityById(id);
+                list.add(speedTest);
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e.getCause());
+        }
+
+        return list;
     }
 }
