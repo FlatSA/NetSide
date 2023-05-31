@@ -1,25 +1,15 @@
 package src;
 
-import src.by.fpmibsu.netside.TraceRoute;
-import src.by.fpmibsu.netside.dao.*;
-import src.by.fpmibsu.netside.entity.Ip;
+import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.entity.Question;
-import src.by.fpmibsu.netside.entity.Route;
-import src.by.fpmibsu.netside.entity.User;
 import src.service.IpService;
 import src.service.QuestionService;
 import src.service.RouteService;
 import src.service.UserService;
-import src.servlet.RouteController;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.sql.*;
-import java.time.LocalTime;
-import java.util.*;
-import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
     static RouteService routeService;
@@ -53,22 +43,5 @@ public class Main {
             System.out.println(e.getMessage());
         }
          */
-    }
-
-    protected static void fillDataBase(List<Ip> ipList, Ip end, Integer userId) {
-        try {
-            ipList.add(end);
-            for(Ip ip : ipList) {
-                ipService.create(ip);
-            }
-
-            User user = userService.findUserById(userId);
-            Route route = new Route(user, ipList.size(), ipList, LocalTime.now().toString());
-            routeService.create(route);
-
-        } catch (DaoException e) {
-            System.err.println("Fail with finding user by id in RouteController");
-            throw new RuntimeException(e);
-        }
     }
 }

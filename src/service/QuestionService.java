@@ -4,11 +4,8 @@ import src.by.fpmibsu.netside.Connector;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.QuestionDao;
 import src.by.fpmibsu.netside.entity.Question;
-import src.servlet.QuestionController;
 
-import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +18,7 @@ public class QuestionService {
         try {
             connection = Connector.createConnection();
             questionDao = new QuestionDao(connection);
-        } catch (ClassNotFoundException | SQLException | IOException e) {
+        } catch (SQLException e) {
             System.err.println("Error QuestionService");
             throw new RuntimeException(e);
         }

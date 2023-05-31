@@ -6,33 +6,63 @@
 <head>
     <title>Questions</title>
     <style>
+        /* Add some additional styling for the new elements */
+        .ask-button {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 20px;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Updated table styling to resemble Stack Overflow */
         table {
             width: 100%;
-            border-collapse: collapse;
-            text-align: center;
+            border-collapse: separate;
+            border-spacing: 0;
             font-family: Arial, sans-serif;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #f6f6f6;
             padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
         }
 
         td {
             padding: 10px;
+            border-bottom: 1px solid #ddd;
         }
 
-        tr:nth-child(even) {
+        .question-row:hover {
             background-color: #f9f9f9;
         }
 
-        tr:hover {
-            background-color: #f5f5f5;
+        .question-row:last-child td {
+            border-bottom: none;
         }
     </style>
 </head>
 <body>
 <h1>Routes</h1>
+<a href="/ask" class="ask-button">Ask Question</a> <!-- Add the "Ask Question" button -->
+
+<div class="search-bar">
+    <!-- Add your search bar HTML here -->
+    <!-- Example: <input type="text" name="search" placeholder="Search questions..."> -->
+</div>
+
 <table>
     <thead>
     <tr>
@@ -44,7 +74,7 @@
     <tbody>
     <% List<Question> questions = (List<Question>) request.getAttribute("questions");
         for (Question question : questions) { %>
-    <tr>
+    <tr class="question-row">
         <td><%= question.getUser().getLogin() %></td>
         <td><%= question.getMessage() %></td>
         <td><%= question.getVotes() %></td>

@@ -3,12 +3,9 @@ package src.service;
 import src.by.fpmibsu.netside.Connector;
 import src.by.fpmibsu.netside.dao.DaoException;
 import src.by.fpmibsu.netside.dao.IpDao;
-import src.by.fpmibsu.netside.dao.RouteDao;
 import src.by.fpmibsu.netside.entity.Ip;
 
-import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class IpService {
@@ -19,7 +16,7 @@ public class IpService {
         try {
             connection = Connector.createConnection();
             ipDao = new IpDao(connection);
-        } catch (ClassNotFoundException | SQLException | IOException e) {
+        } catch (SQLException e) {
             System.err.println("Error IpService");
             throw new RuntimeException(e);
         }
