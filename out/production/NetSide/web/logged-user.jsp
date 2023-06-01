@@ -14,7 +14,6 @@
     }
   </style>
 </head>
-
 <body>
 <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
   <div class="container">
@@ -22,10 +21,16 @@
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"></li>
-        <li class="nav-item"><a class="nav-link" href="features.html">Speed test</a></li>
-        <form method="get" action="main">
-          <button type="submit" class="nav-link" name="button" value="questionSearchButton" style="background: none; border: none; cursor: pointer;">Search Question</button>
-        </form>
+        <li class="nav-item">
+          <form method="get" action="download-sp.jsp">
+            <button type="submit" class="nav-link" name="button" value="speedTest" style="background: none; border: none; cursor: pointer;">Speed Test</button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form method="get" action="main">
+            <button type="submit" class="nav-link" name="button" value="questionSearchButton" style="background: none; border: none; cursor: pointer;">Search Question</button>
+          </form>
+        </li>
         <li class="nav-item">
           <form method="get" action="main">
             <button type="submit" class="nav-link" name="button" value="questionButton" style="background: none; border: none; cursor: pointer;">Questions</button>

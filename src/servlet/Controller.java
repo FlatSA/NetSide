@@ -1,6 +1,7 @@
 package src.servlet;
 
 import org.apache.log4j.Logger;
+import src.by.fpmibsu.netside.DownloadSpeed;
 import src.by.fpmibsu.netside.SearchEngine;
 import src.by.fpmibsu.netside.TraceRoute;
 import src.by.fpmibsu.netside.dao.DaoException;
@@ -15,6 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -71,6 +74,29 @@ public class Controller extends HttpServlet {
                 } else {
                     response.sendRedirect("login-fail.jsp");
                 }
+            } else if("speedTestButton".equals(button)) {
+
+                String link = request.getParameter("drone");
+                User user = new User(null, null, null, null);
+                int counter = 0;
+                double speedSummary = 0;
+                double duration = 0;
+                Instant startClock = Instant.now();
+                while (duration < 5) {
+                    counter += 1;
+                    double speed = DownloadSpeed.mbSpeedPerTick(link);
+                    speedSummary += speed;
+                    duration = Duration.between(startClock, Instant.now()).toMillis() / (double)1000;
+                    System.out.println(duration);
+                }
+                double speed = speedSummary / counter;
+                SpeedTestService stSer = new SpeedTestService();
+                //SpeedTest test = new SpeedTest(user, null, speed, null);
+                //stSer.create(test); uncomment when we get user
+                request.setAttribute("downloadSpeed", String.format("%.3f", speed));
+                request.setAttribute("link", link);
+                request.setAttribute("user_id", user.getId());
+                request.getRequestDispatcher("download-sp-table.jsp").forward(request, response);
             }
         } catch (DaoException e) {
             System.err.println("doPost Fail");
@@ -115,7 +141,7 @@ public class Controller extends HttpServlet {
                 request.setAttribute("questions", questions);
                 request.getRequestDispatcher("question-home-styled.jsp").forward(request, response);
 
-            } else if(button != null && isInteger(button)) { //++
+            } else if(button != null && isInteger(button)) {
 
                 Integer questionId = Integer.valueOf(button);
                 Question question = questionService.findQuestionById(questionId);
@@ -126,7 +152,7 @@ public class Controller extends HttpServlet {
 
                 response.sendRedirect("search-question-styled.jsp");
 
-            } else if("searchQuestion".equals(button)) { // ++
+            } else if("searchQuestion".equals(button)) {
 
                 String query = request.getParameter("queryQuestion");
                 List<Question> questions = questionService.getAllQuestions();

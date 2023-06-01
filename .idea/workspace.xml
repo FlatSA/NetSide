@@ -11,9 +11,25 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe5769b-534e-4da0-aefc-3cfc4bc54e5d" name="Changes" comment="add 3 tests in UserServiceTest, add postgresql library">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetSide.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/NetSide_war_exploded/WEB-INF/classes/src/by/fpmibsu/netside/Connector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/fpmibsu/netside/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/fpmibsu/netside/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/IpDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RatingDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/RouteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/answer-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/answer-question-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logged-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logged-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/question-home-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/question-home-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/route-map-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/route-map-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/routes-list-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/routes-list-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/search-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/search-question-styled.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/searched-question-styled.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/searched-question-styled.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +90,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.32095808",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -111,19 +127,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/NetSide/testng.xml" type="TestNG">
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="$PROJECT_DIR$/gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="$PROJECT_DIR$/src/routes1.yaml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestService" type="TestNG" nameIsGenerated="true">
       <module name="NetSide" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="test.by.fpmibsu.netside.service" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="PROPERTIES_FILE" value="" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.TestService" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -219,7 +249,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="TestNG.D:/NetSide/testng.xml" />
+      <item itemvalue="TestNG.TestService" />
       <item itemvalue="Tomcat Server.Tomcat" />
     </list>
   </component>
@@ -269,6 +299,7 @@
       <workItem from="1685432995563" duration="6376000" />
       <workItem from="1685445636225" duration="11916000" />
       <workItem from="1685531487967" duration="31926000" />
+      <workItem from="1685589559913" duration="5073000" />
     </task>
     <task id="LOCAL-00001" summary="first unit test">
       <created>1685446004475</created>
