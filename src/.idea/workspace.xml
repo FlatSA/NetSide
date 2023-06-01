@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7120f5a-7498-426a-b3a8-2ce964271c83" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/NetSide.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/NetSide/src/by/fpmibsu/netside/dao/ModeratorDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by/fpmibsu/netside/dao/ModeratorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetSide.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/NetSide/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/NetSide/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetSide.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by/fpmibsu/netside/entity/Moderator.java" beforeDir="false" afterPath="$PROJECT_DIR$/by/fpmibsu/netside/entity/Moderator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/NetSide.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AbstractDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/AnswerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/BaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/DaoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/QuestionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/SpeedTestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Answer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Ip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Moderator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Question.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/SpeedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetSide/src/by/fpmibsu/netside/entity/User.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2NpPQCtBSmhQOe0sBG4ykHrL9jY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7120f5a-7498-426a-b3a8-2ce964271c83" name="Changes" comment="" />
+      <created>1680358038337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680358038337</updated>
+      <workItem from="1680358039465" duration="646000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

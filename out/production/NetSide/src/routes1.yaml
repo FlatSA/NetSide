@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Routes list
+  version: 0.1.0
+   
+servers:
+  - url: http://localhost:8080/NetSide
+
+paths:
+ /main?button=routeButton:
+    get:
+      tags: 
+        - Routes
+      responses:
+          '200':
+            description: successfully returned the list of routes
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Routes"
+          'default':
+            description: Eroor
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Error"
+              
+               
+components:
+  schemas:
+    Route:
+      type: object
+      properties:
+        username:
+          type: string
+        length:
+          type: integer
+        email:
+          type: string
+    
+    Routes:
+      type: array
+      items:
+        $ref: "#/components/schemas/Route"  
+    
+    Error:
+      type: string
+      example: some error
+        
+      
